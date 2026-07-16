@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | ElevateFlow</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        electric: '#2563EB',
+                        energy: '#F97316',
+                        dark: '#070B14',
+                        panel: '#101726'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #070B14; color: #F8FAFC; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="border-b border-electric/20 py-6">
+        <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold font-heading text-white tracking-tight">ELEVATE<span class="text-electric">FLOW</span></a>
+            <a href="/" class="text-sm text-slate-400 hover:text-white transition-colors">Return Home</a>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-4 py-16">
+        <h1 class="text-4xl font-bold font-heading mb-8">Terms of Service</h1>
+        <p class="text-slate-400 mb-8">Last Updated: <script>document.write(new Date().toLocaleDateString())</script></p>
+
+        <div class="space-y-8 text-slate-300 leading-relaxed">
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
+                <p>By accessing and using the services provided by ElevateFlow (the "Company," "we," or "us"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">2. Description of Services</h2>
+                <p>ElevateFlow is a digital agency providing custom website development, AI automation, and related business solutions. The specific scope, timeline, and deliverables of any project will be outlined in a separate formal agreement or statement of work (SOW) provided prior to the commencement of work.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">3. Client Responsibilities</h2>
+                <p>To ensure the timely and successful delivery of our services, clients are expected to:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-2">
+                    <li>Provide accurate, necessary information and feedback in a timely manner.</li>
+                    <li>Ensure they possess the necessary rights and licenses for any text, images, or assets provided to ElevateFlow for use in the project.</li>
+                    <li>Review and approve deliverables within agreed-upon timeframes.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">4. Intellectual Property Rights</h2>
+                <p>Upon final payment for a completed project, the client will retain ownership of the final designs and codebase specific to their project, unless otherwise specified in writing. ElevateFlow retains the right to use the completed project as part of our portfolio and marketing materials.</p>
+                <p class="mt-2">ElevateFlow retains ownership of any pre-existing proprietary tools, frameworks, or AI models utilized during the development process.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">5. Limitation of Liability</h2>
+                <p>While we strive to build high-quality solutions, ElevateFlow does not guarantee specific financial results, increased sales, or absolute bug-free software resulting from the use of our websites or AI automations.</p>
+                <p class="mt-2">In no event shall ElevateFlow be held liable for any indirect, incidental, or consequential damages (including loss of profits or data) arising out of the use or inability to use our services.</p>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">6. Payment Terms</h2>
+                <p>Payment terms, including deposits, milestones, and final balances, will be strictly defined in the individual project proposal or contract. Failure to meet payment deadlines may result in a pause of project development.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-white mb-4">7. Contact Us</h2>
+                <p>If you have any questions regarding these Terms of Service, please contact us at:</p>
+                <p class="mt-2 text-electric font-semibold"><a href="mailto:hello@elevateflow.in">hello@elevateflow.in</a></p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-electric/20 text-slate-400 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs tracking-widest">
+            <p>&copy; 2026 ELEVATEFLOW. ALL RIGHTS RESERVED.</p>
+            <div class="flex gap-4 mt-4 md:mt-0 text-electric">
+                <a href="/privacy-policy.html" class="hover:text-white transition-colors">PRIVACY POLICY</a>
+                <a href="/terms-of-service.html" class="hover:text-white transition-colors">TERMS OF SERVICE</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
