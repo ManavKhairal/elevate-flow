@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevateFlow | Smart Solutions for Smarter Businesses</title>
+    <meta name="description" content="Custom websites, AI automation, and tools that help you save time, reduce costs, and grow faster.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        electric: '#2563EB',
+                        energy: '#F97316',
+                        dark: '#070B14',
+                        panel: '#101726'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Cyber/Futuristic Base Styles */
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #070B14; color: #F8FAFC; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
+        
+        /* Particle Canvas */
+        #mesh-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;
+        }
+
+        /* Glassmorphism / Cyber Panels */
+        .glass-panel {
+            background: rgba(16, 23, 38, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-panel:hover {
+            border: 1px solid rgba(37, 99, 235, 0.6);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
+            transform: translateY(-5px);
+        }
+
+        /* Glows & Neons */
+        .glow-blue { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6); }
+        .glow-orange { box-shadow: 0 0 25px rgba(249, 115, 22, 0.6); }
+        .glow-text-blue { text-shadow: 0 0 15px rgba(37, 99, 235, 0.8); }
+        .glow-text-orange { text-shadow: 0 0 15px rgba(249, 115, 22, 0.8); }
+        
+        .bg-blob {
+            position: absolute; border-radius: 50%; filter: blur(120px); z-index: 0; opacity: 0.25;
+            animation: pulse 12s infinite alternate ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.3) translate(30px, -30px); }
+        }
+
+        /* Scroll Animations */
+        .fade-in-up {
+            opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        
+        /* Navbar */
+        #navbar { transition: all 0.3s ease; }
+        .nav-scrolled {
+            background-color: rgba(7, 11, 20, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        /* Tech borders - subdued */
+        .tech-border {
+            position: relative;
+        }
+        .tech-border::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 15px; height: 15px;
+            border-top: 2px solid #2563EB; border-left: 2px solid #2563EB; opacity: 0.7;
+        }
+        .tech-border::after {
+            content: ''; position: absolute; bottom: 0; right: 0; width: 15px; height: 15px;
+            border-bottom: 2px solid #2563EB; border-right: 2px solid #2563EB; opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-energy selection:text-white relative">
+
+    <!-- INTERACTIVE CYBER MESH -->
+    <canvas id="mesh-canvas"></canvas>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-5 bg-transparent border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-heading font-bold text-white tracking-tight flex items-center gap-2 glow-text-blue">
+                    <i class="fas fa-location-arrow transform -rotate-45 text-electric"></i>
+                    Elevate<span class="text-electric">Flow</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-slate-300 hover:text-white hover:glow-text-blue transition-all text-sm font-medium tracking-wide">About</a>
+                    <a href="#services" class="text-slate-300 hover:text-white hover:glow-text-blue transition-all text-sm font-medium tracking-wide">Services</a>
+                    <a href="#process" class="text-slate-300 hover:text-white hover:glow-text-blue transition-all text-sm font-medium tracking-wide">Process</a>
+                    <a href="#portfolio" class="text-slate-300 hover:text-white hover:glow-text-blue transition-all text-sm font-medium tracking-wide">Portfolio</a>
+                    <a href="#contact" class="bg-energy hover:bg-orange-500 text-white px-6 py-2.5 rounded font-bold transition-all hover:-translate-y-0.5 text-sm glow-orange tracking-widest uppercase border border-orange-400">
+                        Free Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile menu btn -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-electric focus:outline-none glow-text-blue">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark/95 backdrop-blur-xl border-b border-electric/30 absolute w-full left-0 top-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-electric uppercase">About</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-electric uppercase">Services</a>
+                <a href="#portfolio" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-electric uppercase">Portfolio</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-bold text-energy uppercase mt-4">Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Ambient Cyber Glows -->
+        <div class="bg-blob bg-electric w-[600px] h-[600px] top-[-20%] left-[-10%]"></div>
+        <div class="bg-blob bg-energy w-[500px] h-[500px] bottom-[0%] right-[-10%] opacity-20" style="animation-delay: -5s"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10 lg:mt-0">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left fade-in-up">
+                    <span class="inline-block py-1.5 px-4 rounded bg-electric/10 border border-electric/40 text-electric text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-md glow-blue">
+                        Build. Scale. Automate.
+                    </span>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight text-white font-heading">
+                        Smart Technology <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric via-blue-400 to-energy glow-text-blue">Solutions</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Custom websites, AI automation, and tools that help you save time, reduce costs, and grow faster.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-energy hover:bg-orange-500 text-white px-8 py-4 rounded font-bold transition-all hover:scale-105 text-center glow-orange border border-orange-400 uppercase tracking-wider">
+                            Free Consultation
+                        </a>
+                        <a href="#services" class="glass-panel text-white hover:text-electric hover:border-electric px-8 py-4 rounded font-bold transition-all hover:-translate-y-1 text-center tracking-wider uppercase">
+                            See Our Work
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Futuristic HUD Graphic -->
+                <div class="hidden lg:flex justify-center relative fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="relative w-full aspect-square max-w-md flex items-center justify-center">
+                        <!-- Rotating Rings -->
+                        <div class="absolute inset-4 rounded-full border border-electric/30 animate-[spin_20s_linear_infinite]" style="border-top-color: transparent; border-bottom-color: transparent;"></div>
+                        <div class="absolute inset-10 rounded-full border border-energy/20 animate-[spin_15s_linear_infinite_reverse]" style="border-left-color: transparent; border-right-color: transparent;"></div>
+                        <div class="absolute inset-20 rounded-full border border-electric/10 animate-[spin_30s_linear_infinite]"></div>
+                        
+                        <!-- Floating Glass Dashboard -->
+                        <div class="absolute w-4/5 h-4/5 glass-panel rounded-xl p-6 flex flex-col gap-4 transform rotate-3 hover:rotate-0 transition-transform duration-700 tech-border">
+                            <div class="flex justify-between items-center border-b border-electric/20 pb-4">
+                                <div class="flex gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-energy animate-pulse"></div>
+                                    <div class="w-3 h-3 rounded-full bg-electric"></div>
+                                </div>
+                                <div class="text-xs text-electric font-mono tracking-widest glow-text-blue">SYSTEM ACTIVE</div>
+                            </div>
+                            <div class="flex-1 flex gap-4">
+                                <!-- Faux Graph -->
+                                <div class="w-1/3 bg-dark/50 rounded border border-electric/20 flex flex-col justify-end p-2 gap-2 relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMzcsIDk5LCAyMzUsIDAuMikiLz48L3N2Zz4=')] opacity-50"></div>
+                                    <div class="w-full bg-electric/40 rounded h-1/3 relative z-10"></div>
+                                    <div class="w-full bg-electric/60 rounded h-2/3 relative z-10"></div>
+                                    <div class="w-full bg-energy/80 rounded h-full glow-orange relative z-10"></div>
+                                </div>
+                                <!-- Faux Data -->
+                                <div class="flex-1 space-y-4 pt-2">
+                                    <div class="h-2 bg-electric/30 rounded w-full"></div>
+                                    <div class="h-2 bg-electric/20 rounded w-5/6"></div>
+                                    <div class="h-2 bg-electric/20 rounded w-4/6"></div>
+                                    <div class="mt-8 flex items-center gap-4 border border-electric/20 p-3 rounded bg-electric/5">
+                                        <i class="fas fa-robot text-2xl text-electric glow-text-blue"></i>
+                                        <div class="flex-1">
+                                            <div class="text-[10px] text-slate-400 font-mono mb-1">AUTOMATION</div>
+                                            <div class="h-1.5 bg-electric/50 rounded w-3/4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 fade-in-up relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-electric to-energy opacity-20 rounded-2xl blur-xl z-0"></div>
+                    <div class="glass-panel p-2 rounded-2xl relative z-10 tech-border">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Consultation" class="rounded-xl w-full object-cover aspect-[4/3] opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500">
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 fade-in-up">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="h-[1px] w-8 bg-energy"></div>
+                        <h3 class="text-energy uppercase tracking-[0.2em] text-xs font-bold">About Elevateflow</h3>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Bridging the gap between business goals and <span class="text-electric glow-text-blue">smart technology.</span></h2>
+                    
+                    <p class="text-slate-400 mb-6 text-lg leading-relaxed font-light">
+                        I help businesses of all sizes leverage technology to save time, reduce costs, and grow. Whether you're a doctor looking for a patient management system, a restaurant owner wanting a digital menu, or a business needing custom automation – I build solutions that work.
+                    </p>
+                    
+                    <div class="glass-panel border-l-4 border-electric p-6 rounded-r-lg mb-8">
+                        <h4 class="font-bold text-white mb-2 font-heading text-lg">My Mission</h4>
+                        <p class="text-slate-400 text-sm">To make smart technology accessible, practical, and affordable for every business, completely tailored to your unique challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES (INDUSTRY SPECIFIC) -->
+    <section id="services" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <div class="flex items-center justify-center gap-3 mb-2">
+                    <div class="h-[1px] w-8 bg-electric"></div>
+                    <h3 class="text-electric uppercase tracking-[0.2em] text-xs font-bold glow-text-blue">Our Digital Solutions</h3>
+                    <div class="h-[1px] w-8 bg-electric"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Solutions designed for your business.</h2>
+                <p class="text-slate-400 text-lg font-light">We build custom technology tailored to your specific needs – not one-size-fits-all software.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-electric/20 text-electric border border-electric/40 rounded flex items-center justify-center text-2xl group-hover:glow-blue transition-all">
+                            💻
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-electric/10 border border-electric/30 text-electric text-[10px] tracking-widest rounded uppercase font-bold">Web Apps & SaaS</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 font-heading">Bespoke Web Applications</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed">
+                        Scalable, secure, and custom-engineered web ecosystems tailored precisely to your specific business logic and internal operations.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.1s;">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-energy/20 text-energy border border-energy/40 rounded flex items-center justify-center text-2xl group-hover:glow-orange transition-all">
+                            💬
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-energy/10 border border-energy/30 text-energy text-[10px] tracking-widest rounded uppercase font-bold">Automation</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 font-heading">Intelligent WhatsApp Bots</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed">
+                        Automate lead capture, support inquiries, and transactional alerts 24/7 using official WhatsApp enterprise workflow structures.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.2s;">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-blue-400/20 text-blue-400 border border-blue-400/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_15px_rgba(96,165,250,0.6)] transition-all">
+                            🚀
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-blue-400/10 border border-blue-400/30 text-blue-400 text-[10px] tracking-widest rounded uppercase font-bold">Growth Marketing Tech</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 font-heading">High-Converting Sales Funnels</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed">
+                        Stop losing traffic. We design and build automated landing pages and multi-step sales funnels integrated with payment gateways and email triggers to convert cold traffic into paying clients.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.3s;">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-electric/20 text-electric border border-electric/40 rounded flex items-center justify-center text-2xl group-hover:glow-blue transition-all">
+                            🩺
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-electric/10 border border-electric/30 text-electric text-[10px] tracking-widest rounded uppercase font-bold">Healthcare Tech</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 font-heading">Smart Clinic Systems</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed">
+                        Paperless management assets tracking patient files, real-time appointment tokens, prescriptions, and direct digital billing loops.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.4s;">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-energy/20 text-energy border border-energy/40 rounded flex items-center justify-center text-2xl group-hover:glow-orange transition-all">
+                            🍔
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-energy/10 border border-energy/30 text-energy text-[10px] tracking-widest rounded uppercase font-bold">Hospitality Management</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 font-heading">Restaurant Tech Stacks</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed">
+                        End-to-end food industry operations incorporating seamless digital QR ordering layouts, live kitchen ticketing, and sales metrics.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.5s;">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-blue-400/20 text-blue-400 border border-blue-400/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_15px_rgba(96,165,250,0.6)] transition-all">
+                            📅
+                        </div>
+                        <span class="inline-block px-3 py-1 bg-blue-400/10 border border-blue-400/30 text-blue-400 text-[10px] tracking-widest rounded uppercase font-bold">Scheduling Software</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 font-heading">Real-Time Scheduling Engines</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed">
+                        Perfect for salons, consultants, and educational coaching institutes. Complete booking calendars with automated SMS/WhatsApp reminders and automated payment collection upon booking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="py-20 relative z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-electric/20 to-transparent border-y border-electric/30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="glass-panel rounded-2xl p-10 md:p-16 text-center shadow-2xl relative overflow-hidden tech-border">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric/20 via-dark/50 to-dark -z-10"></div>
+                
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-6 font-heading tracking-wide">Ready to save time and grow your business?</h3>
+                <p class="text-slate-400 mb-10 max-w-2xl mx-auto text-lg font-light">Stop wasting hours on manual tasks or struggling with generic software. Let's build exactly what you need.</p>
+                <a href="#contact" class="inline-block bg-energy hover:bg-orange-600 text-white px-10 py-5 rounded font-bold transition-all hover:scale-105 shadow-lg shadow-orange-500/40 tracking-wide border border-orange-400">
+                    Book a Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / CASE STUDIES -->
+    <section id="portfolio" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <div class="flex items-center justify-center gap-3 mb-2">
+                    <div class="h-[1px] w-8 bg-electric"></div>
+                    <h3 class="text-electric uppercase tracking-[0.2em] text-xs font-bold glow-text-blue">Case Studies</h3>
+                    <div class="h-[1px] w-8 bg-electric"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Real solutions. Real results.</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="glass-panel rounded-xl overflow-hidden fade-in-up group tech-border">
+                    <div class="h-48 border-b border-electric/20 p-6 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-dark to-electric/10">
+                        <i class="fas fa-hospital-user text-6xl text-electric/10 absolute -bottom-2 -right-2 transform group-hover:scale-110 transition-transform"></i>
+                        <span class="inline-block px-3 py-1 bg-electric/20 border border-electric/50 text-electric text-[10px] tracking-widest rounded w-max uppercase font-bold">Healthcare</span>
+                        <h3 class="text-xl font-bold text-white mt-auto z-10 font-heading tracking-wide">Smart Clinic Solution</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-300 text-sm mb-4 border-b border-white/5 pb-2 font-bold">Client: Dr. Rajesh Kumar</p>
+                        <p class="text-slate-400 text-sm mb-6 font-light">Built a complete patient management system with online booking, automated appointment reminders, and digital records.</p>
+                        <div class="bg-electric/10 p-4 rounded border border-electric/20">
+                            <p class="text-energy text-xs tracking-widest mb-1 uppercase font-bold">Result:</p>
+                            <p class="text-white text-sm font-medium">40% reduction in no-shows, 15 hours/week saved for clinic staff.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="glass-panel rounded-xl overflow-hidden fade-in-up group tech-border" style="transition-delay: 0.1s;">
+                    <div class="h-48 border-b border-energy/20 p-6 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-dark to-energy/10">
+                        <i class="fas fa-burger text-6xl text-energy/10 absolute -bottom-2 -right-2 transform group-hover:scale-110 transition-transform"></i>
+                        <span class="inline-block px-3 py-1 bg-energy/20 border border-energy/50 text-energy text-[10px] tracking-widest rounded w-max uppercase font-bold">Hospitality</span>
+                        <h3 class="text-xl font-bold text-white mt-auto z-10 font-heading tracking-wide">Digital Menu & Ordering</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-300 text-sm mb-4 border-b border-white/5 pb-2 font-bold">Client: Sneha's Restaurant</p>
+                        <p class="text-slate-400 text-sm mb-6 font-light">Implemented a seamless QR code digital menu system with fully integrated tableside ordering and automated payments.</p>
+                        <div class="bg-energy/10 p-4 rounded border border-energy/20">
+                            <p class="text-energy text-xs tracking-widest mb-1 uppercase font-bold">Result:</p>
+                            <p class="text-white text-sm font-medium">30% faster table turnover, 20% increase in average order value.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="glass-panel rounded-xl overflow-hidden fade-in-up group tech-border" style="transition-delay: 0.2s;">
+                    <div class="h-48 border-b border-blue-400/20 p-6 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-dark to-blue-400/10">
+                        <i class="fas fa-file-invoice-dollar text-6xl text-blue-400/10 absolute -bottom-2 -right-2 transform group-hover:scale-110 transition-transform"></i>
+                        <span class="inline-block px-3 py-1 bg-blue-400/20 border border-blue-400/50 text-blue-400 text-[10px] tracking-widest rounded w-max uppercase font-bold">B2B Service</span>
+                        <h3 class="text-xl font-bold text-white mt-auto z-10 font-heading tracking-wide">Automated Invoicing</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-300 text-sm mb-4 border-b border-white/5 pb-2 font-bold">Client: Amit's Business</p>
+                        <p class="text-slate-400 text-sm mb-6 font-light">Built a custom automation tool that handles invoice generation, payment reminders, and bank reconciliation automatically.</p>
+                        <div class="bg-blue-400/10 p-4 rounded border border-blue-400/20">
+                            <p class="text-energy text-xs tracking-widest mb-1 uppercase font-bold">Result:</p>
+                            <p class="text-white text-sm font-medium">15 hours of manual work saved per month, 50% faster payment collection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <div class="flex items-center justify-center gap-3 mb-2">
+                    <div class="h-[1px] w-8 bg-electric"></div>
+                    <h3 class="text-electric uppercase tracking-[0.2em] text-xs font-bold glow-text-blue">Client Success</h3>
+                    <div class="h-[1px] w-8 bg-electric"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white font-heading">Don't just take my word for it.</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="glass-panel p-8 rounded-xl fade-in-up tech-border border-l-2 border-l-electric">
+                    <div class="flex text-electric mb-4 text-xs gap-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-300 font-light mb-6">"Elevateflow built a patient portal for my clinic. Now my patients can book appointments online and get automated reminders. My staff saves 10+ hours a week."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 bg-electric/20 rounded-full flex items-center justify-center font-bold text-electric border border-electric/50">RK</div>
+                        <div>
+                            <p class="font-bold text-sm text-white tracking-wide">Dr. Rajesh Kumar</p>
+                            <p class="text-xs text-slate-500">Cardiologist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-panel p-8 rounded-xl fade-in-up tech-border border-l-2 border-l-energy" style="transition-delay: 0.1s;">
+                    <div class="flex text-energy mb-4 text-xs gap-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-300 font-light mb-6">"The QR code menu and online ordering system increased my table turnover by 30%. I wish I had done this sooner."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 bg-energy/20 rounded-full flex items-center justify-center font-bold text-energy border border-energy/50">SP</div>
+                        <div>
+                            <p class="font-bold text-sm text-white tracking-wide">Sneha Patel</p>
+                            <p class="text-xs text-slate-500">Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 relative z-10 border-t border-electric/20 bg-gradient-to-b from-dark to-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-2xl overflow-hidden tech-border fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-5">
+                    <!-- Contact Info Sidebar -->
+                    <div class="lg:col-span-2 bg-black/40 p-10 text-white flex flex-col justify-between border-r border-electric/20">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-4 text-white font-heading tracking-wide">Let's talk business.</h3>
+                            <p class="text-slate-400 mb-10 font-light text-sm">Schedule a free discovery call to discuss your bottlenecks and how custom technology can solve them.</p>
+                            
+                            <div class="space-y-8">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-electric/10 rounded-full border border-electric/30 flex items-center justify-center text-electric">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500 tracking-widest mb-1 uppercase font-bold">Email Us</p>
+                                        <a href="mailto:hello@elevateflow.in" class="text-sm hover:text-electric transition-colors glow-text-blue font-semibold">hello@elevateflow.in</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-energy/10 rounded-full border border-energy/30 flex items-center justify-center text-energy">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500 tracking-widest mb-1 uppercase font-bold">Website</p>
+                                        <a href="#" class="text-sm hover:text-energy transition-colors glow-text-orange font-semibold">elevateflow.in</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form (Netlify ready) -->
+                    <div class="lg:col-span-3 p-10 lg:p-14">
+                        <h3 class="text-2xl font-bold text-white mb-6 font-heading">Request a Free Consultation</h3>
+                        <form name="consultation" method="POST" data-netlify="true" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold tracking-wider text-slate-300 uppercase mb-2">Full Name</label>
+                                    <input type="text" name="name" required class="w-full px-4 py-3 bg-dark/50 border border-electric/30 rounded text-white focus:border-electric focus:ring-1 focus:ring-electric outline-none transition-all text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold tracking-wider text-slate-300 uppercase mb-2">Work Email</label>
+                                    <input type="email" name="email" required class="w-full px-4 py-3 bg-dark/50 border border-electric/30 rounded text-white focus:border-electric focus:ring-1 focus:ring-electric outline-none transition-all text-sm">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-xs font-bold tracking-wider text-slate-300 uppercase mb-2">Business Type / Industry</label>
+                                <input type="text" name="industry" placeholder="e.g. Dental Clinic, Retail Store, Agency" class="w-full px-4 py-3 bg-dark/50 border border-electric/30 rounded text-white focus:border-electric focus:ring-1 focus:ring-electric outline-none transition-all text-sm">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-xs font-bold tracking-wider text-energy uppercase mb-2">What is your biggest bottleneck right now?</label>
+                                <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-dark/50 border border-electric/30 rounded text-white focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-all text-sm resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-electric/20 hover:bg-electric text-white border border-electric font-bold py-4 rounded transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)] tracking-wide uppercase">
+                                Submit Request
+                            </button>
+                            <p class="text-xs text-center text-slate-500 mt-4">We respect your privacy. No spam, ever.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark border-t border-electric/20 text-slate-400 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs tracking-widest">
+                <p>&copy; 2026 ELEVATEFLOW. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-4 mt-4 md:mt-0 text-electric">
+                    <a href="#" class="hover:text-white transition-colors">PRIVACY POLICY</a>
+                    <a href="#" class="hover:text-white transition-colors">TERMS OF SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVITY SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                observer.observe(el);
+            });
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('nav-scrolled', 'py-3');
+                    navbar.classList.remove('py-5', 'bg-transparent', 'border-transparent');
+                } else {
+                    navbar.classList.add('py-5', 'bg-transparent', 'border-transparent');
+                    navbar.classList.remove('nav-scrolled', 'py-3');
+                }
+            });
+
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+
+        // INTERACTIVE CYBER PARTICLE MESH
+        const canvas = document.getElementById('mesh-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+        let mouse = { x: null, y: null, radius: 180 };
+        
+        window.addEventListener('mousemove', e => { mouse.x = e.x; mouse.y = e.y; });
+        window.addEventListener('mouseout', () => { mouse.x = null; mouse.y = null; });
+        window.addEventListener('touchstart', e => { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; });
+        window.addEventListener('touchmove', e => { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; });
+        window.addEventListener('touchend', () => { mouse.x = null; mouse.y = null; });
+
+        function initMesh() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            particles = [];
+            const numParticles = Math.floor((width * height) / 10000); 
+            for(let i = 0; i < numParticles; i++) {
+                particles.push({
+                    x: Math.random() * width, y: Math.random() * height,
+                    velX: (Math.random() - 0.5) * 1.5, velY: (Math.random() - 0.5) * 1.5,
+                    size: Math.random() * 2 + 0.5,
+                    color: Math.random() > 0.85 ? '#F97316' : '#2563EB'
+                });
+            }
+        }
+
+        function animateMesh() {
+            requestAnimationFrame(animateMesh);
+            ctx.clearRect(0, 0, width, height);
+            
+            for(let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.velX; p.y += p.velY;
+                
+                if (p.x < 0 || p.x > width) p.velX *= -1;
+                if (p.y < 0 || p.y > height) p.velY *= -1;
+                
+                // Repel effect
+                if (mouse.x != null && mouse.y != null) {
+                    let dx = mouse.x - p.x, dy = mouse.y - p.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius) {
+                        let force = (mouse.radius - distance) / mouse.radius;
+                        p.x -= (dx / distance) * force * 4;
+                        p.y -= (dy / distance) * force * 4;
+                    }
+                }
+                
+                ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); 
+                // Add glow to particles
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = p.color;
+                ctx.fillStyle = p.color; 
+                ctx.fill();
+                ctx.shadowBlur = 0; // Reset for lines
+                
+                for(let j = i; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dx = p.x - p2.x, dy = p.y - p2.y, dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < 130) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = p.color === '#F97316' ? `rgba(249, 115, 22, ${0.4 - (dist/350)})` : `rgba(37, 99, 235, ${0.4 - (dist/350)})`; 
+                        ctx.lineWidth = 1; ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+                    }
+                }
+            }
+        }
+        
+        window.addEventListener('resize', initMesh);
+        initMesh(); animateMesh();
+    </script>
+</body>
+</html>
