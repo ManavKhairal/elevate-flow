@@ -102,14 +102,41 @@
             content: ''; position: absolute; bottom: 0; right: 0; width: 15px; height: 15px;
             border-bottom: 2px solid #2563EB; border-right: 2px solid #2563EB; opacity: 0.7;
         }
+
+        /* Preloader */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: #070B14; z-index: 9999;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transition: opacity 0.5s ease;
+        }
+        .progress-bar-container {
+            width: 300px; height: 6px; background: rgba(255,255,255,0.1);
+            border-radius: 4px; overflow: hidden; margin-top: 20px;
+        }
+        .progress-bar {
+            height: 100%; width: 0%; background: linear-gradient(90deg, #2563EB, #F97316);
+            transition: width 0.1s ease;
+        }
     </style>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
 </head>
-<body class="antialiased selection:bg-energy selection:text-white relative">
+<body class="antialiased selection:bg-energy selection:text-white relative bg-[#070B14]">
 
     <!-- INTERACTIVE CYBER MESH -->
     <canvas id="mesh-canvas"></canvas>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <h2 class="text-3xl font-heading font-bold text-white tracking-tight flex items-center gap-2">
+            Elevate<span class="text-electric">Flow</span>
+        </h2>
+        <div class="text-slate-400 text-sm mt-4 tracking-widest uppercase" id="loading-text">Loading Assets... 0%</div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
 
     <!-- NAVIGATION -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-5 bg-transparent border-b border-transparent">
@@ -152,7 +179,19 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- 1. The Scroll Animation Section -->
+    <!-- This section is sized to allow scrolling through the animation -->
+    <div id="animation-container" class="relative w-full z-10 h-[200vh] md:h-[400vh]">
+        <div class="sticky top-0 w-full h-[100vh] h-[100dvh] overflow-hidden bg-transparent flex items-center justify-center">
+            <canvas id="frame-canvas" class="w-full h-full object-contain md:object-cover"></canvas>
+        </div>
+    </div>
+
+    <!-- 2. The Website Content Section -->
+    <!-- This starts immediately after the animation finishes scrolling -->
+    <div id="website-content" class="relative z-20 bg-transparent" style="min-height: 100vh;">
+        
+        <!-- HERO SECTION -->
     <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <!-- Ambient Cyber Glows -->
         <div class="bg-blob bg-electric w-[600px] h-[600px] top-[-20%] left-[-10%]"></div>
@@ -568,6 +607,8 @@
         </div>
     </footer>
 
+    </div> <!-- End Website Content Section -->
+
     <!-- INTERACTIVITY SCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -606,6 +647,82 @@
                 });
             });
         });
+
+        // --- Frame Animation Logic ---
+        const frameCanvas = document.getElementById('frame-canvas');
+        const context = frameCanvas.getContext('2d');
+        const frameCount = 285; // Current number of frames
+        const images = [];
+        let imagesLoaded = 0;
+
+        const currentFrame = index => `./frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
+
+        // Preload Images
+        for (let i = 1; i <= frameCount; i++) {
+            const img = new Image();
+            img.src = currentFrame(i);
+            img.onload = () => {
+                imagesLoaded++;
+                const progress = Math.floor((imagesLoaded / frameCount) * 100);
+                const loadingText = document.getElementById('loading-text');
+                const progressBar = document.getElementById('progress-bar');
+                if(loadingText) loadingText.innerText = `Loading Assets... ${progress}%`;
+                if(progressBar) progressBar.style.width = `${progress}%`;
+
+                if (imagesLoaded === frameCount) {
+                    initAnimation();
+                }
+            };
+            images.push(img);
+        }
+
+        function initAnimation() {
+            // Hide preloader
+            const preloader = document.getElementById('preloader');
+            if(preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }
+
+            // Set initial canvas size based on first image
+            const firstImg = images[0];
+            frameCanvas.width = firstImg.width;
+            frameCanvas.height = firstImg.height;
+            context.drawImage(firstImg, 0, 0);
+            
+            // Render specific frame
+            const updateImage = index => {
+                const clampedIndex = Math.min(Math.max(index, 0), frameCount - 1);
+                context.drawImage(images[clampedIndex], 0, 0);
+            }
+
+            // Scroll Event Listener mapped strictly to the animation container
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const animContainer = document.getElementById('animation-container');
+                        if(animContainer) {
+                            const rect = animContainer.getBoundingClientRect();
+                            // How far we've scrolled past the top of the container
+                            const scrollTop = window.scrollY - (animContainer.offsetTop || 0);
+                            
+                            // Max scrollable distance for the animation container
+                            const maxScrollTop = animContainer.offsetHeight - window.innerHeight;
+                            
+                            // Calculate fraction and clamp between 0 and 1
+                            let scrollFraction = scrollTop / maxScrollTop;
+                            scrollFraction = Math.max(0, Math.min(1, scrollFraction));
+                            
+                            const frameIndex = Math.floor(scrollFraction * (frameCount - 1));
+                            updateImage(frameIndex);
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
 
         // INTERACTIVE CYBER PARTICLE MESH
         const canvas = document.getElementById('mesh-canvas');
