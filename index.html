@@ -668,6 +668,17 @@
 
     <!-- INTERACTIVITY SCRIPT -->
     <script>
+        // Force scroll to top on reload and prevent browser scroll restoration
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        // Clear hash if present so it doesn't jump to a section on reload
+        if (window.location.hash) {
+            window.history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
