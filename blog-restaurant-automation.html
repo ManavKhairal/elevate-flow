@@ -40,7 +40,7 @@
 
     <style>
         /* Cyber/Futuristic Base Styles */
-        body { font-family: 'Inter', sans-serif; overflow-x: clip; background-color: #070B14; color: #F8FAFC; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #070B14; color: #F8FAFC; }
         h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
         
         /* Particle Canvas */
@@ -74,15 +74,10 @@
         }
 
         /* Scroll Animations */
-        @media (min-width: 768px) {
-            .fade-in-up {
-                opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-            }
-            .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-up {
+            opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        @media (max-width: 767px) {
-            .fade-in-up { opacity: 1; transform: none; }
-        }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
         
         /* Navbar */
         #navbar { transition: all 0.3s ease; }
