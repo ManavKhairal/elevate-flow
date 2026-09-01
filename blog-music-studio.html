@@ -288,13 +288,6 @@
                 observer.observe(el);
             });
 
-            // Failsafe for mobile: force visible after 1.5s
-            if (window.innerWidth < 768) {
-                setTimeout(() => {
-                    document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible'));
-                }, 1500);
-            }
-
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -317,8 +310,6 @@
 
         // INTERACTIVE CYBER PARTICLE MESH
         (function() {
-            // Disable mesh canvas on mobile to vastly improve performance
-            if (window.innerWidth < 768) return;
             const meshCanvas = document.getElementById('mesh-canvas');
             if(!meshCanvas) return;
             const ctx = meshCanvas.getContext('2d');
