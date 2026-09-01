@@ -74,10 +74,15 @@
         }
 
         /* Scroll Animations */
-        .fade-in-up {
-            opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        @media (min-width: 768px) {
+            .fade-in-up {
+                opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            }
+            .fade-in-up.visible { opacity: 1; transform: translateY(0); }
         }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 767px) {
+            .fade-in-up { opacity: 1; transform: none; }
+        }
         
         /* Navbar */
         #navbar { transition: all 0.3s ease; }
