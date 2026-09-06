@@ -889,6 +889,8 @@
             const firstImg = images[0];
             frameCanvas.width = firstImg.width;
             frameCanvas.height = firstImg.height;
+            context.imageSmoothingEnabled = true;
+            context.imageSmoothingQuality = 'high';
             context.drawImage(firstImg, 0, 0);
             
             // Render specific frame
