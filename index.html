@@ -855,8 +855,9 @@
         const frameCount = 285; // Current number of frames
         const images = [];
         let imagesLoaded = 0;
+        let animationInitialized = false;
 
-        const currentFrame = index => `./frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
+        const currentFrame = index => `./frames_webp/ezgif-frame-${index.toString().padStart(3, '0')}.webp`;
 
         // Preload Images
         for (let i = 1; i <= frameCount; i++) {
@@ -864,14 +865,18 @@
             img.src = currentFrame(i);
             img.onload = () => {
                 imagesLoaded++;
-                const progress = Math.floor((imagesLoaded / frameCount) * 100);
-                const loadingText = document.getElementById('loading-text');
-                const progressBar = document.getElementById('progress-bar');
-                if(loadingText) loadingText.innerText = `Loading Assets... ${progress}%`;
-                if(progressBar) progressBar.style.width = `${progress}%`;
+                
+                if (!animationInitialized) {
+                    const progress = Math.min(100, Math.floor((imagesLoaded / 15) * 100));
+                    const loadingText = document.getElementById('loading-text');
+                    const progressBar = document.getElementById('progress-bar');
+                    if(loadingText) loadingText.innerText = `Loading Assets... ${progress}%`;
+                    if(progressBar) progressBar.style.width = `${progress}%`;
 
-                if (imagesLoaded === frameCount) {
-                    initAnimation();
+                    if (imagesLoaded >= 15 && images[0] && images[0].complete) {
+                        animationInitialized = true;
+                        initAnimation();
+                    }
                 }
             };
             images.push(img);
@@ -887,16 +892,21 @@
 
             // Set initial canvas size based on first image
             const firstImg = images[0];
-            frameCanvas.width = firstImg.width;
-            frameCanvas.height = firstImg.height;
+            frameCanvas.width = firstImg.width || 2560; // Fallback just in case
+            frameCanvas.height = firstImg.height || 1440;
             context.imageSmoothingEnabled = true;
             context.imageSmoothingQuality = 'high';
-            context.drawImage(firstImg, 0, 0);
+            if (firstImg.complete) {
+                context.drawImage(firstImg, 0, 0);
+            }
             
             // Render specific frame
             const updateImage = index => {
                 const clampedIndex = Math.min(Math.max(index, 0), frameCount - 1);
-                context.drawImage(images[clampedIndex], 0, 0);
+                const img = images[clampedIndex];
+                if (img && img.complete && img.naturalWidth !== 0) {
+                    context.drawImage(img, 0, 0);
+                }
             }
 
             // Scroll Event Listener mapped strictly to the animation container
