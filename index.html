@@ -154,6 +154,38 @@
             100% { transform: scale(1.3) translate(30px, -30px); }
         }
 
+        /* Dynamic Chat Animations */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .chat-msg-enter {
+            animation: chatPopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+            transform-origin: bottom center;
+        }
+        @keyframes chatPopIn {
+            0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .chat-msg-exit {
+            animation: chatFadeOut 0.5s ease-out forwards;
+        }
+        @keyframes chatFadeOut {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 6s ease-in-out 3s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
         /* Scroll Animations */
         .fade-in-up {
             opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -260,13 +292,6 @@
         </div>
     </nav>
 
-    <!-- 1. The Scroll Animation Section -->
-    <!-- This section is sized to allow scrolling through the animation -->
-    <div id="animation-container" class="relative w-full z-10 hidden md:block md:h-[400vh]">
-        <div class="sticky top-0 w-full h-[100vh] h-[100dvh] overflow-hidden bg-transparent flex items-center justify-center">
-            <canvas id="frame-canvas" class="w-full h-full object-contain md:object-cover"></canvas>
-        </div>
-    </div>
 
     <!-- 2. The Website Content Section -->
     <!-- This starts immediately after the animation finishes scrolling -->
@@ -280,62 +305,113 @@
             
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10 lg:mt-0">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Left Content -->
                     <div class="text-center lg:text-left fade-in-up">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-electric/30 text-electric font-semibold text-sm mb-6 glow-text-blue">
+                            <span class="w-2 h-2 rounded-full bg-energy animate-pulse"></span>
+                            Now accepting new clients
+                        </div>
+                        
                         <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight text-white font-heading">
-                            We put your business on <br/>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric via-blue-400 to-energy glow-text-blue">Autopilot</span>
+                            Put your business on <br class="hidden lg:block"/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric via-blue-400 to-energy glow-text-blue">Autopilot.</span>
                         </h1>
-                        <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-                            Stop wasting hours on manual tasks. We build simple, custom tools that save you time, cut costs, and help your business grow.
+                        
+                        <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            We architect high-octane websites, intelligent WhatsApp automations, and self-driving booking systems that capture every lead, slash your manual workload, and scale your revenue while you sleep.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-                            <a href="#contact" class="bg-energy hover:bg-orange-500 text-white px-8 py-4 rounded font-bold transition-all hover:scale-105 text-center glow-orange border border-orange-400 uppercase tracking-wider">
-                                Free Consultation
+                        
+                        <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center">
+                            <a href="#contact" class="bg-energy hover:bg-orange-500 text-white px-8 py-4 rounded font-bold text-lg transition-all hover:scale-105 text-center glow-orange border border-orange-400 uppercase tracking-wider w-full sm:w-auto flex items-center justify-center">
+                                Start Growing Free
                             </a>
-                            <a href="#services" class="glass-panel text-white hover:text-electric hover:border-electric px-8 py-4 rounded font-bold transition-all hover:-translate-y-1 text-center tracking-wider uppercase">
-                                See How We Help
+                            <a href="#portfolio" class="glass-panel text-white hover:text-electric hover:border-electric px-8 py-4 rounded font-bold text-lg transition-all hover:-translate-y-1 text-center uppercase tracking-wider w-full sm:w-auto flex items-center justify-center">
+                                See Case Studies
                             </a>
                         </div>
+                        <p class="text-sm text-slate-400 mt-4 flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fas fa-shield-alt text-electric"></i> No credit card required. Pay only if you love it.
+                        </p>
                     </div>
                     
-                    <!-- Futuristic HUD Graphic -->
-                    <div class="hidden lg:flex justify-center relative fade-in-up" style="transition-delay: 0.2s;">
-                        <div class="relative w-full aspect-square max-w-md flex items-center justify-center">
-                            <!-- Rotating Rings -->
-                            <div class="absolute inset-4 rounded-full border border-electric/30 animate-[spin_20s_linear_infinite]" style="border-top-color: transparent; border-bottom-color: transparent;"></div>
-                            <div class="absolute inset-10 rounded-full border border-energy/20 animate-[spin_15s_linear_infinite_reverse]" style="border-left-color: transparent; border-right-color: transparent;"></div>
-                            <div class="absolute inset-20 rounded-full border border-electric/10 animate-[spin_30s_linear_infinite]"></div>
-                            
-                            <!-- Floating Glass Dashboard -->
-                            <div class="absolute w-4/5 h-4/5 glass-panel rounded-xl p-6 flex flex-col gap-4 transform rotate-3 hover:rotate-0 transition-transform duration-700 tech-border">
-                                <div class="flex justify-between items-center border-b border-electric/20 pb-4">
-                                    <div class="flex gap-2">
-                                        <div class="w-3 h-3 rounded-full bg-energy animate-pulse"></div>
-                                        <div class="w-3 h-3 rounded-full bg-electric"></div>
+                    <!-- Right Mockup (ManyChat style UI graphic) -->
+                    <div class="w-full relative fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="relative glass-panel rounded-3xl tech-border border-electric/30 p-6 max-w-md mx-auto">
+                            <!-- Fake UI Header -->
+                            <div class="flex items-center justify-between border-b border-electric/20 pb-4 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-dark border border-electric/30 flex items-center justify-center text-electric">
+                                        <i class="fas fa-robot text-lg"></i>
                                     </div>
-                                    <div class="text-xs text-electric font-mono tracking-widest glow-text-blue">SYSTEM ACTIVE</div>
+                                    <div>
+                                        <div class="font-bold text-white">Automated Assistant</div>
+                                        <div class="text-xs text-energy font-medium">Online</div>
+                                    </div>
                                 </div>
-                                <div class="flex-1 flex gap-4">
-                                    <!-- Faux Graph -->
-                                    <div class="w-1/3 bg-dark/50 rounded border border-electric/20 flex flex-col justify-end p-2 gap-2 relative overflow-hidden">
-                                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMzcsIDk5LCAyMzUsIDAuMikiLz48L3N2Zz4=')] opacity-50"></div>
-                                        <div class="w-full bg-electric/40 rounded h-1/3 relative z-10"></div>
-                                        <div class="w-full bg-electric/60 rounded h-2/3 relative z-10"></div>
-                                        <div class="w-full bg-energy/80 rounded h-full glow-orange relative z-10"></div>
-                                    </div>
-                                    <!-- Faux Data -->
-                                    <div class="flex-1 space-y-4 pt-2">
-                                        <div class="h-2 bg-electric/30 rounded w-full"></div>
-                                        <div class="h-2 bg-electric/20 rounded w-5/6"></div>
-                                        <div class="h-2 bg-electric/20 rounded w-4/6"></div>
-                                        <div class="mt-8 flex items-center gap-4 border border-electric/20 p-3 rounded bg-electric/5">
-                                            <i class="fas fa-robot text-2xl text-electric glow-text-blue"></i>
-                                            <div class="flex-1">
-                                                <div class="text-[10px] text-slate-400 font-mono mb-1">AUTOMATION</div>
-                                                <div class="h-1.5 bg-electric/50 rounded w-3/4"></div>
-                                            </div>
+                                <div class="text-electric"><i class="fas fa-ellipsis-v"></i></div>
+                            </div>
+                            
+                            <!-- Dynamic Fake Chat Flow -->
+                            <div class="relative h-[280px] overflow-hidden -mx-2 px-2">
+                                <!-- Top gradient mask to make them disappear smoothly -->
+                                <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-[#070B14] to-transparent z-10 pointer-events-none opacity-80"></div>
+                                
+                                <div id="dynamic-chat-container" class="h-full overflow-y-auto hide-scrollbar pb-4 pt-16 flex flex-col gap-4">
+                                    <div class="flex justify-end pt-2 chat-msg-enter w-full">
+                                        <div class="bg-electric p-4 rounded-[24px] rounded-br-md text-sm text-white max-w-[85%] shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                                            <div class="mb-3 px-1">Check out our product page!</div>
+                                            <button class="w-full bg-white/20 hover:bg-white/30 transition-colors py-2.5 rounded-xl text-white font-medium shadow-sm">
+                                                Let's Go!
+                                            </button>
                                         </div>
                                     </div>
+                                    <div class="flex gap-3 items-end chat-msg-enter w-full">
+                                        <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-electric/30">
+                                            <img src="https://i.pravatar.cc/100?img=12" alt="User Avatar" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="bg-dark/80 border border-electric/20 px-5 py-4 rounded-[24px] rounded-bl-md text-sm text-slate-300 max-w-[85%] shadow-md leading-relaxed">
+                                            How much does it cost?
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end pt-2 chat-msg-enter w-full">
+                                        <div class="bg-electric p-4 rounded-[24px] rounded-br-md text-sm text-white max-w-[85%] shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                                            <div class="mb-3 px-1">We offer tailored plans for every business.</div>
+                                            <button class="w-full bg-white/20 hover:bg-white/30 transition-colors py-2.5 rounded-xl text-white font-medium shadow-sm">
+                                                View Pricing
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-3 items-end chat-msg-enter w-full">
+                                        <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-electric/30">
+                                            <img src="https://i.pravatar.cc/100?img=5" alt="User Avatar" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="bg-dark/80 border border-electric/20 px-5 py-4 rounded-[24px] rounded-bl-md text-sm text-slate-300 max-w-[85%] shadow-md leading-relaxed">
+                                            Do you have a website where I can see more?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Floating Badge 1 -->
+                            <div class="hidden lg:flex absolute -left-20 -top-12 glass-panel p-4 rounded-2xl border border-electric/30 shadow-[0_0_20px_rgba(37,99,235,0.2)] animate-float-delayed items-center gap-3 z-20">
+                                <div class="w-10 h-10 rounded-full bg-energy/20 border border-energy/30 text-energy flex items-center justify-center text-lg">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400 font-medium">New Booking</div>
+                                    <div class="font-bold text-white text-sm">Confirmed</div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 2 -->
+                            <div class="hidden lg:flex absolute -right-20 -bottom-6 glass-panel p-4 rounded-2xl border border-electric/30 shadow-[0_0_20px_rgba(37,99,235,0.2)] animate-float items-center gap-3 z-20">
+                                <div class="w-10 h-10 rounded-full bg-electric/20 border border-electric/30 text-electric flex items-center justify-center text-lg">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400 font-medium">Time Saved</div>
+                                    <div class="font-bold text-white text-sm">14 Hours/week</div>
                                 </div>
                             </div>
                         </div>
@@ -392,14 +468,14 @@
                     <!-- Service 1 -->
                     <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 bg-electric/20 text-electric border border-electric/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all">
-                                💻
+                            <div class="w-14 h-14 bg-blue-400/20 text-blue-400 border border-blue-400/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_15px_rgba(96,165,250,0.6)] transition-all">
+                                🚀
                             </div>
-                            <span class="inline-block px-3 py-1 bg-electric/10 border border-electric/30 text-electric text-[10px] tracking-widest rounded uppercase font-bold">Software</span>
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 border border-blue-400/30 text-blue-400 text-[10px] tracking-widest rounded uppercase font-bold">Websites</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Custom Software for Your Business</h3>
+                        <h3 class="text-xl font-bold text-white mb-4 font-heading">High-Conversion Websites</h3>
                         <p class="text-slate-400 font-light text-sm leading-relaxed">
-                            Software built specifically for how you run your business—no forced templates, just tools that do exactly what you need.
+                            Stop losing website visitors. We build high-speed digital front doors designed to capture leads, rank locally, and build immediate trust.
                         </p>
                     </div>
 
@@ -413,40 +489,82 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-4 font-heading">Automated Customer Chat</h3>
                         <p class="text-slate-400 font-light text-sm leading-relaxed">
-                            Never miss a lead. We set up WhatsApp systems to answer common questions and book clients 24/7 without you lifting a finger.
+                            Never miss a lead. We set up automated WhatsApp workflows to answer FAQs, pre-qualify leads, and book clients 24/7 without you lifting a finger.
                         </p>
                     </div>
 
                     <!-- Service 3 -->
                     <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.2s;">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 bg-blue-400/20 text-blue-400 border border-blue-400/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_15px_rgba(96,165,250,0.6)] transition-all">
-                                🚀
+                            <div class="w-14 h-14 bg-electric/20 text-electric border border-electric/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all">
+                                📅
                             </div>
-                            <span class="inline-block px-3 py-1 bg-blue-400/10 border border-blue-400/30 text-blue-400 text-[10px] tracking-widest rounded uppercase font-bold">Websites</span>
+                            <span class="inline-block px-3 py-1 bg-electric/10 border border-electric/30 text-electric text-[10px] tracking-widest rounded uppercase font-bold">Booking</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Websites That Actually Get Sales</h3>
+                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Smart Appointment Systems</h3>
                         <p class="text-slate-400 font-light text-sm leading-relaxed">
-                            Stop losing website visitors. We build simple, effective pages that turn clicks into paying customers without the fluff.
+                            Let clients book their own appointments online, complete with automatic SMS/WhatsApp reminders and upfront deposit collection to reduce no-shows.
                         </p>
                     </div>
 
                     <!-- Service 4 -->
                     <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.3s;">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 bg-electric/20 text-electric border border-electric/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all">
-                                🩺
+                            <div class="w-14 h-14 bg-purple-500/20 text-purple-400 border border-purple-500/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] transition-all">
+                                🧲
                             </div>
-                            <span class="inline-block px-3 py-1 bg-electric/10 border border-electric/30 text-electric text-[10px] tracking-widest rounded uppercase font-bold">Healthcare</span>
+                            <span class="inline-block px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] tracking-widest rounded uppercase font-bold">CRM</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Clinic Management Made Easy</h3>
+                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Lead Capture & CRM Routing</h3>
                         <p class="text-slate-400 font-light text-sm leading-relaxed">
-                            Get rid of paper files. Track patients, handle billing, and drastically reduce no-shows with automated reminders.
+                            Stop losing leads from IndiaMart or Facebook in a messy inbox. We integrate webhooks to route them directly to your CRM or Google Sheets.
                         </p>
                     </div>
 
                     <!-- Service 5 -->
                     <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.4s;">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(16,185,129,0.6)] transition-all">
+                                ⚙️
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] tracking-widest rounded uppercase font-bold">Automation</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Business Process Automation</h3>
+                        <p class="text-slate-400 font-light text-sm leading-relaxed">
+                            Stop paying for manual data entry. We automate data transfer between your emails, spreadsheets, and accounting software.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.5s;">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] transition-all">
+                                📊
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] tracking-widest rounded uppercase font-bold">Data</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Operational Dashboards</h3>
+                        <p class="text-slate-400 font-light text-sm leading-relaxed">
+                            See your daily metrics, sales, and KPIs at a glance in real-time. We deploy custom dashboards to help you run your business efficiently.
+                        </p>
+                    </div>
+
+                    <!-- Service 7 -->
+                    <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.6s;">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-14 h-14 bg-electric/20 text-electric border border-electric/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all">
+                                🩺
+                            </div>
+                            <span class="inline-block px-3 py-1 bg-electric/10 border border-electric/30 text-electric text-[10px] tracking-widest rounded uppercase font-bold">Healthcare</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Clinic Management Systems</h3>
+                        <p class="text-slate-400 font-light text-sm leading-relaxed">
+                            Get rid of paper files. Track patients, handle billing, and drastically reduce no-shows with automated reminders tailored for clinics.
+                        </p>
+                    </div>
+
+                    <!-- Service 8 -->
+                    <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.7s;">
                         <div class="flex justify-between items-start mb-6">
                             <div class="w-14 h-14 bg-energy/20 text-energy border border-energy/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_25px_rgba(249,115,22,0.6)] transition-all">
                                 🍔
@@ -455,35 +573,21 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-4 font-heading">Restaurant Ordering Systems</h3>
                         <p class="text-slate-400 font-light text-sm leading-relaxed">
-                            Speed up your tables. We build QR code menus and direct-to-kitchen ordering so your staff can focus on the food and service.
+                            Bypass aggregator commissions. We build QR code menus and direct-to-kitchen ordering so you keep 100% of your margins.
                         </p>
                     </div>
 
-                    <!-- Service 6 -->
-                    <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.5s;">
+                    <!-- Service 9 -->
+                    <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.8s;">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 bg-blue-400/20 text-blue-400 border border-blue-400/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_15px_rgba(96,165,250,0.6)] transition-all">
-                                📅
-                            </div>
-                            <span class="inline-block px-3 py-1 bg-blue-400/10 border border-blue-400/30 text-blue-400 text-[10px] tracking-widest rounded uppercase font-bold">Booking</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Automated Booking Calendars</h3>
-                        <p class="text-slate-400 font-light text-sm leading-relaxed">
-                            Let clients book their own appointments online, complete with automatic SMS reminders and upfront payment collection.
-                        </p>
-                    </div>
-
-                    <!-- Service 7 -->
-                    <div class="glass-panel rounded-xl p-8 fade-in-up group tech-border" style="transition-delay: 0.6s;">
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="w-14 h-14 bg-purple-500/20 text-purple-400 border border-purple-500/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] transition-all">
+                            <div class="w-14 h-14 bg-pink-500/20 text-pink-400 border border-pink-500/40 rounded flex items-center justify-center text-2xl group-hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] transition-all">
                                 🔍
                             </div>
-                            <span class="inline-block px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] tracking-widest rounded uppercase font-bold">Marketing</span>
+                            <span class="inline-block px-3 py-1 bg-pink-500/10 border border-pink-500/30 text-pink-400 text-[10px] tracking-widest rounded uppercase font-bold">Growth</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4 font-heading">Search Engine Optimization (SEO)</h3>
+                        <h3 class="text-xl font-bold text-white mb-4 font-heading">SEO & Local Marketing</h3>
                         <p class="text-slate-400 font-light text-sm leading-relaxed">
-                            Stop being invisible on Google. We optimize your website so customers find you first when they search for your services.
+                            Stop being invisible online. We optimize your digital presence so high-net-worth clients find you first when they search locally.
                         </p>
                     </div>
                 </div>
@@ -849,93 +953,14 @@
             });
         });
 
-        // --- Frame Animation Logic ---
-        const frameCanvas = document.getElementById('frame-canvas');
-        const context = frameCanvas.getContext('2d');
-        const frameCount = 285; // Current number of frames
-        const images = [];
-        let imagesLoaded = 0;
-        let animationInitialized = false;
-
-        const currentFrame = index => `./frames_webp/ezgif-frame-${index.toString().padStart(3, '0')}.webp`;
-
-        // Preload Images
-        for (let i = 1; i <= frameCount; i++) {
-            const img = new Image();
-            img.src = currentFrame(i);
-            img.onload = () => {
-                imagesLoaded++;
-                
-                if (!animationInitialized) {
-                    const progress = Math.min(100, Math.floor((imagesLoaded / 15) * 100));
-                    const loadingText = document.getElementById('loading-text');
-                    const progressBar = document.getElementById('progress-bar');
-                    if(loadingText) loadingText.innerText = `Loading Assets... ${progress}%`;
-                    if(progressBar) progressBar.style.width = `${progress}%`;
-
-                    if (imagesLoaded >= 15 && images[0] && images[0].complete) {
-                        animationInitialized = true;
-                        initAnimation();
-                    }
-                }
-            };
-            images.push(img);
-        }
-
-        function initAnimation() {
-            // Hide preloader
+        // Hide preloader on load
+        window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
-            if(preloader) {
+            if (preloader) {
                 preloader.style.opacity = '0';
                 setTimeout(() => preloader.style.display = 'none', 500);
             }
-
-            // Set initial canvas size based on first image
-            const firstImg = images[0];
-            frameCanvas.width = firstImg.width || 2560; // Fallback just in case
-            frameCanvas.height = firstImg.height || 1440;
-            context.imageSmoothingEnabled = true;
-            context.imageSmoothingQuality = 'high';
-            if (firstImg.complete) {
-                context.drawImage(firstImg, 0, 0);
-            }
-            
-            // Render specific frame
-            const updateImage = index => {
-                const clampedIndex = Math.min(Math.max(index, 0), frameCount - 1);
-                const img = images[clampedIndex];
-                if (img && img.complete && img.naturalWidth !== 0) {
-                    context.drawImage(img, 0, 0);
-                }
-            }
-
-            // Scroll Event Listener mapped strictly to the animation container
-            let ticking = false;
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    window.requestAnimationFrame(() => {
-                        const animContainer = document.getElementById('animation-container');
-                        if(animContainer && animContainer.offsetHeight > 0) {
-                            const rect = animContainer.getBoundingClientRect();
-                            // How far we've scrolled past the top of the container
-                            const scrollTop = window.scrollY - (animContainer.offsetTop || 0);
-                            
-                            // Max scrollable distance for the animation container
-                            const maxScrollTop = animContainer.offsetHeight - window.innerHeight;
-                            
-                            // Calculate fraction and clamp between 0 and 1
-                            let scrollFraction = scrollTop / maxScrollTop;
-                            scrollFraction = Math.max(0, Math.min(1, scrollFraction));
-                            
-                            const frameIndex = Math.floor(scrollFraction * (frameCount - 1));
-                            updateImage(frameIndex);
-                        }
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            }, { passive: true });
-        }
+        });
 
         // INTERACTIVE CYBER PARTICLE MESH
         (function() {
@@ -1012,6 +1037,80 @@
             window.addEventListener('resize', initMesh);
             initMesh(); animateMesh();
         })();
+
+        // Dynamic Chat Animation
+        const chatContainer = document.getElementById('dynamic-chat-container');
+        const chatMessages = [
+            `<div class="flex gap-3 items-end chat-msg-enter w-full">
+                <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-electric/30">
+                    <img src="https://i.pravatar.cc/100?img=5" alt="User Avatar" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-dark/80 border border-electric/20 px-5 py-4 rounded-[24px] rounded-bl-md text-sm text-slate-300 max-w-[85%] shadow-md leading-relaxed">
+                    Do you have a website where I can see more?
+                </div>
+            </div>`,
+            `<div class="flex justify-end pt-2 chat-msg-enter w-full">
+                <div class="bg-electric p-4 rounded-[24px] rounded-br-md text-sm text-white max-w-[85%] shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                    <div class="mb-3 px-1">Check out our product page!</div>
+                    <button class="w-full bg-white/20 hover:bg-white/30 transition-colors py-2.5 rounded-xl text-white font-medium shadow-sm">
+                        Let's Go!
+                    </button>
+                </div>
+            </div>`,
+            `<div class="flex gap-3 items-end chat-msg-enter w-full">
+                <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-electric/30">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="User Avatar" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-dark/80 border border-electric/20 px-5 py-4 rounded-[24px] rounded-bl-md text-sm text-slate-300 max-w-[85%] shadow-md leading-relaxed">
+                    How much does it cost?
+                </div>
+            </div>`,
+            `<div class="flex justify-end pt-2 chat-msg-enter w-full">
+                <div class="bg-electric p-4 rounded-[24px] rounded-br-md text-sm text-white max-w-[85%] shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                    <div class="mb-3 px-1">We offer tailored plans for every business.</div>
+                    <button class="w-full bg-white/20 hover:bg-white/30 transition-colors py-2.5 rounded-xl text-white font-medium shadow-sm">
+                        View Pricing
+                    </button>
+                </div>
+            </div>`
+        ];
+
+        if (chatContainer) {
+            let msgIndex = 0;
+            // Clear the container first in case it has static HTML
+            chatContainer.innerHTML = '';
+            
+            // Add first message immediately
+            chatContainer.insertAdjacentHTML('beforeend', chatMessages[0]);
+            msgIndex++;
+
+            setInterval(() => {
+                // If more than 3 messages, remove the oldest one
+                if (chatContainer.children.length > 3) {
+                    const oldest = chatContainer.firstElementChild;
+                    oldest.classList.remove('chat-msg-enter');
+                    oldest.classList.add('chat-msg-exit');
+                    setTimeout(() => {
+                        if(oldest.parentNode === chatContainer) {
+                            oldest.remove();
+                        }
+                    }, 500);
+                }
+
+                // Add new message
+                chatContainer.insertAdjacentHTML('beforeend', chatMessages[msgIndex % chatMessages.length]);
+                msgIndex++;
+                
+                // Smooth scroll to bottom
+                setTimeout(() => {
+                    chatContainer.scrollTo({
+                        top: chatContainer.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                }, 50);
+
+            }, 3500); // Loop every 3.5 seconds
+        }
     </script>
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/918527738145?text=Hello%21%20I%20came%20from%20your%20website%20and%20would%20like%20to%20connect." 
