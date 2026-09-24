@@ -20,11 +20,23 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulating immediate client feedback
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 600);
+    
+    const formData = new FormData(e.currentTarget);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // @ts-ignore
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        setLoading(false);
+        setSubmitted(true);
+      })
+      .catch((error) => {
+        console.error("Form submission error", error);
+        setLoading(false);
+      });
   };
 
   return (
@@ -118,7 +130,11 @@ export function Contact() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-4" name="consultation" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="consultation" />
+                    <p className="hidden">
+                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div>
                       <label
                         htmlFor="fullName"
@@ -129,6 +145,7 @@ export function Contact() {
                       <input
                         type="text"
                         id="fullName"
+                        name="fullName"
                         required
                         placeholder="e.g. Dr. Rajesh Kumar"
                         className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm"
@@ -145,6 +162,7 @@ export function Contact() {
                       <input
                         type="email"
                         id="workEmail"
+                        name="workEmail"
                         required
                         placeholder="rajesh@clinic.com"
                         className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm"
@@ -161,6 +179,7 @@ export function Contact() {
                       <input
                         type="text"
                         id="industry"
+                        name="industry"
                         required
                         placeholder="e.g. Healthcare, Hospitality, B2B Distribution"
                         className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm"
@@ -176,6 +195,7 @@ export function Contact() {
                       </label>
                       <textarea
                         id="bottleneck"
+                        name="bottleneck"
                         rows={3}
                         placeholder="e.g. Too many patient no-shows, manual spreadsheet invoicing, or missed after-hours leads..."
                         className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm resize-none"
