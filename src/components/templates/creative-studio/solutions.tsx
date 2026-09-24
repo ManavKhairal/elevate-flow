@@ -162,7 +162,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
 
       <div className="relative container flex flex-col gap-12 md:gap-16">
         <div className="flex flex-col items-center gap-2 text-center">
-          <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-xs">
+          <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
             Core Architecture
           </span>
           <WordsPullUp
@@ -204,7 +204,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
               <p className="text-xl font-medium tracking-tight text-(--cs-cream)">
                 Bespoke Digital Infrastructure.
               </p>
-              <p className="text-xs leading-relaxed text-(--cs-muted)">
+              <p className="text-sm leading-relaxed text-(--cs-muted)">
                 Every workflow, interface, and automation is engineered around
                 how the business actually operates—never forced into rigid SaaS
                 templates.
@@ -246,7 +246,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
                       <span className="font-mono text-[10px] uppercase tracking-wider text-(--cs-muted) block">
                         {card.pillar}
                       </span>
-                      <span className="font-mono text-xs tabular-nums text-(--cs-ink)">
+                      <span className="font-mono text-sm tabular-nums text-(--cs-ink)">
                         {card.number}
                       </span>
                     </div>
@@ -261,7 +261,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
                     {card.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-2.5 text-xs text-(--cs-muted) leading-relaxed"
+                        className="flex items-start gap-2.5 text-sm text-(--cs-muted) leading-relaxed"
                       >
                         <span
                           className={cn(
@@ -281,7 +281,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
                 <div className="pt-6 border-t border-white/5 mt-6">
                   <a
                     href="#contact"
-                    className="group inline-flex items-center gap-1.5 text-xs font-medium text-(--cs-ink) transition-colors hover:text-(--cs-cream)"
+                    className="group inline-flex items-center gap-1.5 text-sm font-medium text-(--cs-ink) transition-colors hover:text-(--cs-cream)"
                   >
                     <span>Scope this system</span>
                     <ArrowRight className="h-3 w-3 -rotate-45 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

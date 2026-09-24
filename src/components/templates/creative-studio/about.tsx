@@ -21,7 +21,7 @@ export function About() {
   return (
     <section className="bg-black px-4 py-20 sm:px-6 sm:py-28 md:py-32">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 rounded-[2rem] bg-[#101010] px-6 py-16 text-center sm:px-10 sm:py-20 md:px-16 md:py-24">
-        <span className="text-[10px] font-medium uppercase tracking-[0.24em] text-[#DEDBC8] sm:text-xs">
+        <span className="text-[10px] font-medium uppercase tracking-[0.24em] text-[#DEDBC8] sm:text-sm">
           Visual arts
         </span>
 
@@ -34,7 +34,7 @@ export function About() {
 
         <ScrollRevealText
           text={BODY}
-          className="mx-auto max-w-2xl text-xs leading-relaxed text-[#DEDBC8] sm:text-sm md:text-base"
+          className="mx-auto max-w-2xl text-sm leading-relaxed text-[#DEDBC8] sm:text-base md:text-base"
         />
       </div>
     </section>

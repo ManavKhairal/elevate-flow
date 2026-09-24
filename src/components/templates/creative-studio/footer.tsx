@@ -50,7 +50,7 @@ export function Footer() {
         {/* Top Call to Action Row */}
         <div className="flex flex-col gap-8 border-b border-white/10 pb-12 md:flex-row md:items-end md:justify-between">
           <div className="flex flex-col gap-5">
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-xs">
+            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
               Boutique Digital Systems Studio
             </span>
             <h2 className="max-w-xl text-3xl leading-[0.95] tracking-[-0.02em] text-(--cs-cream) sm:text-4xl sm:leading-[0.9] md:text-5xl lg:text-6xl">
@@ -87,7 +87,7 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-xs text-(--cs-cream)/70 transition-colors hover:text-(--cs-cream) sm:text-sm"
+                      className="text-sm text-(--cs-cream)/70 transition-colors hover:text-(--cs-cream) sm:text-base"
                     >
                       {link.label}
                     </a>
@@ -101,7 +101,7 @@ export function Footer() {
             <h3 className="text-[10px] font-mono uppercase tracking-[0.2em] text-(--cs-muted)">
               Studio HQ
             </h3>
-            <p className="text-xs leading-relaxed text-(--cs-cream)/70 sm:text-sm">
+            <p className="text-sm leading-relaxed text-(--cs-cream)/70 sm:text-base">
               New Delhi, India.
               <br />
               Deploying systems globally.
@@ -123,19 +123,19 @@ export function Footer() {
 
         {/* Sub-Footer Legal & Copyright */}
         <div className="flex flex-col gap-4 pt-6 pb-6 sm:flex-row sm:items-center sm:justify-between border-t border-white/5">
-          <p className="text-xs text-(--cs-muted)">
+          <p className="text-sm text-(--cs-muted)">
             © 2026 ElevateFlow. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             <a
               href="/privacy-policy"
-              className="text-xs text-(--cs-muted) transition-colors hover:text-(--cs-cream)"
+              className="text-sm text-(--cs-muted) transition-colors hover:text-(--cs-cream)"
             >
               Privacy Policy
             </a>
             <a
               href="/terms-of-service"
-              className="text-xs text-(--cs-muted) transition-colors hover:text-(--cs-cream)"
+              className="text-sm text-(--cs-muted) transition-colors hover:text-(--cs-cream)"
             >
               Terms of Service
             </a>

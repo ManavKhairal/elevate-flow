@@ -35,7 +35,7 @@ export function RiskReversal() {
       <div className="container flex flex-col gap-14 md:gap-20">
         {/* Central Authoritative Statement */}
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
-          <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-xs">
+          <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
             Studio Charter
           </span>
 
@@ -49,7 +49,7 @@ export function RiskReversal() {
             transparent commitment.
           </p>
 
-          <div className="mt-2 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-xs sm:text-sm font-mono text-(--cs-cream)">
+          <div className="mt-2 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-sm sm:text-base font-mono text-(--cs-cream)">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             <span>No credit card required. Pay only if you love it.</span>
           </div>
@@ -66,13 +66,13 @@ export function RiskReversal() {
               transition={{ duration: 0.55, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col gap-3 py-6 md:py-0 md:px-8 first:md:pl-0 last:md:pr-0"
             >
-              <span className="font-mono text-xs text-(--cs-ink)/60">
+              <span className="font-mono text-sm text-(--cs-ink)/60">
                 0{idx + 1}
               </span>
               <h3 className="text-base font-medium text-(--cs-cream)">
                 {principle.title}
               </h3>
-              <p className="text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+              <p className="text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                 {principle.desc}
               </p>
             </motion.div>

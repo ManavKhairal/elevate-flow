@@ -202,7 +202,7 @@ export function Features({ videoSrc }: { videoSrc?: string }) {
                   {card.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 text-xs text-(--cs-muted) sm:text-sm"
+                      className="flex items-start gap-2 text-sm text-(--cs-muted) sm:text-base"
                     >
                       <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-(--cs-ink)" />
                       <span>{item}</span>
@@ -212,7 +212,7 @@ export function Features({ videoSrc }: { videoSrc?: string }) {
 
                 <a
                   href="#"
-                  className="group mt-auto inline-flex items-center gap-1.5 text-xs font-medium text-(--cs-ink) sm:text-sm"
+                  className="group mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-(--cs-ink) sm:text-base"
                 >
                   Learn more
                   <ArrowRight className="h-3.5 w-3.5 -rotate-45 transition-transform duration-200 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />

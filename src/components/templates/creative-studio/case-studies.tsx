@@ -8,7 +8,7 @@ import { WordsPullUp } from "./primitives";
 
 function ConceptualHealthcare() {
   return (
-    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-xs border border-white/5">
+    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-sm border border-white/5">
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -24,13 +24,13 @@ function ConceptualHealthcare() {
           <p className="text-[9px] uppercase tracking-wider text-(--cs-muted) mb-1">
             SYSTEM TRIGGER · 24H CONFIRMATION DISPATCH
           </p>
-          <p className="font-sans text-xs text-(--cs-cream)">
+          <p className="font-sans text-sm text-(--cs-cream)">
             &quot;Dr. Kumar Clinic: Reminder for checkup tomorrow at 2:00 PM. Reply
             Y to confirm, N to reschedule.&quot;
           </p>
         </div>
         <div className="self-end max-w-[50%] rounded-lg bg-white/10 p-2.5 text-right">
-          <span className="font-sans text-xs text-(--cs-cream)">
+          <span className="font-sans text-sm text-(--cs-cream)">
             &quot;Y — confirmed&quot;
           </span>
         </div>
@@ -46,7 +46,7 @@ function ConceptualHealthcare() {
 
 function ConceptualHospitality() {
   return (
-    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-xs border border-white/5">
+    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-sm border border-white/5">
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-amber-400" />
@@ -81,7 +81,7 @@ function ConceptualHospitality() {
 
 function ConceptualB2B() {
   return (
-    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-xs border border-white/5">
+    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-sm border border-white/5">
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-blue-400" />
@@ -120,7 +120,7 @@ function AnimatedWaveform() {
   const heights = [28, 65, 38, 92, 54, 78, 42, 88, 70, 35, 82, 95, 48, 62, 30, 85, 40, 72];
 
   return (
-    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-xs border border-white/5">
+    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-sm border border-white/5">
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-purple-400" />
@@ -132,7 +132,7 @@ function AnimatedWaveform() {
       </div>
 
       <div className="flex flex-col gap-3 py-4">
-        <div className="flex items-center justify-between text-xs text-(--cs-cream)">
+        <div className="flex items-center justify-between text-sm text-(--cs-cream)">
           <span>Studio.wav · Safdarjung Enclave</span>
           <span className="text-purple-300 font-mono text-[10px]">
             ACTIVE FREQUENCY SPECTRUM
@@ -184,14 +184,14 @@ export function CaseStudies() {
         {/* Section Header */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between border-b border-white/5 pb-8">
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-xs">
+            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
               Selected Work
             </span>
             <h2 className="text-3xl leading-tight text-(--cs-cream) sm:text-4xl md:text-5xl">
               <WordsPullUp text="Real systems. Documented outcomes." />
             </h2>
           </div>
-          <p className="max-w-md text-xs text-(--cs-muted) sm:text-sm">
+          <p className="max-w-md text-sm text-(--cs-muted) sm:text-base">
             We measure engineering craft not by subjective aesthetics alone,
             but by recovered hours and captured revenue.
           </p>
@@ -214,7 +214,7 @@ export function CaseStudies() {
                     <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
                       01 / FEATURED DEPLOYMENT · HEALTHCARE
                     </span>
-                    <span className="text-xs text-(--cs-ink)/80 font-mono">
+                    <span className="text-sm text-(--cs-ink)/80 font-mono">
                       CLIENT: Dr. Rajesh Kumar
                     </span>
                   </div>
@@ -223,7 +223,7 @@ export function CaseStudies() {
                     Automated WhatsApp Booking &amp; No-Show Shield
                   </h3>
 
-                  <p className="mt-4 text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+                  <p className="mt-4 text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                     Replaced manual front-desk phone tag and paper registers with an
                     automated 24/7 WhatsApp scheduling flow and two-way 24-hour
                     appointment confirmations.
@@ -235,7 +235,7 @@ export function CaseStudies() {
                     <span className="font-mono text-3xl font-semibold tracking-tight text-(--cs-cream) sm:text-4xl">
                       40%
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       No-Show Reduction
                     </span>
                   </div>
@@ -243,7 +243,7 @@ export function CaseStudies() {
                     <span className="font-mono text-3xl font-semibold tracking-tight text-(--cs-cream) sm:text-4xl">
                       15 hrs/wk
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       Staff Hours Reclaimed
                     </span>
                   </div>
@@ -252,7 +252,7 @@ export function CaseStudies() {
                 <div className="mt-6">
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-1.5 text-xs font-medium text-(--cs-ink) transition-colors hover:text-(--cs-cream)"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-(--cs-ink) transition-colors hover:text-(--cs-cream)"
                   >
                     <span>Request healthcare briefing</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
@@ -281,7 +281,7 @@ export function CaseStudies() {
                   <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
                     02 / HOSPITALITY &amp; DINING
                   </span>
-                  <span className="text-xs text-(--cs-ink)/80 font-mono">
+                  <span className="text-sm text-(--cs-ink)/80 font-mono">
                     CLIENT: Sneha&apos;s Restaurant
                   </span>
                 </div>
@@ -290,7 +290,7 @@ export function CaseStudies() {
                   QR Menu &amp; Direct Kitchen Ordering Architecture
                 </h3>
 
-                <p className="mt-3 text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+                <p className="mt-3 text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                   Eliminated third-party aggregator commissions and waitstaff ordering
                   bottlenecks with high-speed table QR ordering routed directly to the
                   kitchen display.
@@ -306,7 +306,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     30%
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Faster Table Turn
                   </span>
                 </div>
@@ -314,7 +314,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     +20%
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Average Order Value
                   </span>
                 </div>
@@ -334,7 +334,7 @@ export function CaseStudies() {
                   <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
                     03 / B2B SERVICE OPERATIONS
                   </span>
-                  <span className="text-xs text-(--cs-ink)/80 font-mono">
+                  <span className="text-sm text-(--cs-ink)/80 font-mono">
                     CLIENT: Amit&apos;s Business
                   </span>
                 </div>
@@ -343,7 +343,7 @@ export function CaseStudies() {
                   Automated Invoicing &amp; Payment Reconciliation Flow
                 </h3>
 
-                <p className="mt-3 text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+                <p className="mt-3 text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                   Automated manual data entry between project completion, billing
                   triggers, and bank deposit reconciliation, eliminating 40+ hours of
                   monthly manual accounting.
@@ -359,7 +359,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     50%
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Faster Payment Cycle
                   </span>
                 </div>
@@ -367,7 +367,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     15 hrs/mo
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Bookkeeping Saved
                   </span>
                 </div>
@@ -390,7 +390,7 @@ export function CaseStudies() {
                     <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
                       04 / CREATIVE &amp; AUDIO PRODUCTION
                     </span>
-                    <span className="text-xs text-(--cs-ink)/80 font-mono">
+                    <span className="text-sm text-(--cs-ink)/80 font-mono">
                       CLIENT: Studio.wav
                     </span>
                   </div>
@@ -399,7 +399,7 @@ export function CaseStudies() {
                     High-Fidelity Studio Web Presence &amp; Session Engine
                   </h3>
 
-                  <p className="mt-4 text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+                  <p className="mt-4 text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                     Designed a sleek, dark-canvas digital experience for an elite New
                     Delhi studio in Safdarjung Enclave, pairing an embedded audio
                     portfolio with direct WhatsApp session reservations.
@@ -411,7 +411,7 @@ export function CaseStudies() {
                     <span className="font-mono text-base font-medium tracking-tight text-(--cs-cream) sm:text-xl block">
                       Integrated Booking Experience
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       Core Deliverable
                     </span>
                   </div>
@@ -419,7 +419,7 @@ export function CaseStudies() {
                     <span className="font-mono text-3xl font-semibold tracking-tight text-(--cs-cream) sm:text-4xl">
                       24/7
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-xs">
+                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       Session Inflow Engine
                     </span>
                   </div>
@@ -428,7 +428,7 @@ export function CaseStudies() {
                 <div className="mt-6">
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-1.5 text-xs font-medium text-(--cs-ink) transition-colors hover:text-(--cs-cream)"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-(--cs-ink) transition-colors hover:text-(--cs-cream)"
                   >
                     <span>Request creative studio briefing</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />

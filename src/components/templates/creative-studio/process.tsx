@@ -48,14 +48,14 @@ export function Process() {
         {/* Section Header */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between border-b border-white/10 pb-8">
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-xs">
+            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
               Studio Methodology
             </span>
             <h2 className="text-3xl leading-tight text-(--cs-cream) sm:text-4xl md:text-5xl">
               <WordsPullUp text="From bottleneck diagnosis to self-driving system." />
             </h2>
           </div>
-          <p className="max-w-md text-xs text-(--cs-muted) sm:text-sm">
+          <p className="max-w-md text-sm text-(--cs-muted) sm:text-base">
             A disciplined, three-phase delivery model engineered to minimize leadership
             overhead while maximizing operational leverage.
           </p>
@@ -77,7 +77,7 @@ export function Process() {
                   <span className="font-mono text-5xl font-light text-(--cs-cream)/25 sm:text-6xl lg:text-7xl">
                     {step.number}
                   </span>
-                  <span className="font-mono text-xs uppercase tracking-widest text-(--cs-ink)">
+                  <span className="font-mono text-sm uppercase tracking-widest text-(--cs-ink)">
                     PHASE / {step.phase}
                   </span>
                 </div>
@@ -86,7 +86,7 @@ export function Process() {
                   {step.headline}
                 </h3>
 
-                <p className="mt-4 text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+                <p className="mt-4 text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                   {step.description}
                 </p>
               </div>
@@ -95,7 +95,7 @@ export function Process() {
                 <span className="text-[9px] font-mono uppercase tracking-wider text-(--cs-muted) block">
                   DELIVERABLE MILESTONE
                 </span>
-                <span className="text-xs font-mono font-medium text-(--cs-cream) block mt-1">
+                <span className="text-sm font-mono font-medium text-(--cs-cream) block mt-1">
                   {step.deliverable}
                 </span>
               </div>

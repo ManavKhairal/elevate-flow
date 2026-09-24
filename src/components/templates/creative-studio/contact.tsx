@@ -47,7 +47,7 @@ export function Contact() {
             {/* Left Column: Narrative & Direct Channels */}
             <div className="flex flex-col justify-between lg:col-span-5">
               <div className="flex flex-col gap-4">
-                <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-xs">
+                <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
                   Start A Project
                 </span>
 
@@ -58,7 +58,7 @@ export function Contact() {
                   />
                 </h2>
 
-                <p className="mt-2 text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+                <p className="mt-2 text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                   Schedule a 15-minute diagnostic conversation. Tell us what is
                   wasting your staff&apos;s time, and we will outline whether a custom
                   system can automate it.
@@ -88,7 +88,7 @@ export function Contact() {
                       href="https://wa.me/918527738145"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-xs font-medium text-emerald-400 border border-emerald-500/20 transition-all hover:bg-emerald-500/20"
+                      className="group inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 border border-emerald-500/20 transition-all hover:bg-emerald-500/20"
                     >
                       <MessageSquare className="h-3.5 w-3.5" />
                       <span>Chat on WhatsApp (+91 85277 38145)</span>
@@ -117,14 +117,14 @@ export function Contact() {
                     <h3 className="text-xl font-medium text-(--cs-cream)">
                       Diagnostic Request Received
                     </h3>
-                    <p className="max-w-md text-xs leading-relaxed text-(--cs-muted) sm:text-sm">
+                    <p className="max-w-md text-sm leading-relaxed text-(--cs-muted) sm:text-base">
                       Thank you. We will review your business bottlenecks and contact
                       you within 24 hours to confirm your 15-minute diagnostic call.
                     </p>
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="mt-2 text-xs font-medium text-(--cs-ink) underline hover:text-(--cs-cream)"
+                      className="mt-2 text-sm font-medium text-(--cs-ink) underline hover:text-(--cs-cream)"
                     >
                       Submit another inquiry
                     </button>
@@ -138,7 +138,7 @@ export function Contact() {
                     <div>
                       <label
                         htmlFor="fullName"
-                        className="block text-xs font-medium text-(--cs-cream) mb-1.5"
+                        className="block text-sm font-medium text-(--cs-cream) mb-1.5"
                       >
                         Full Name <span className="text-white/40">*</span>
                       </label>
@@ -148,14 +148,14 @@ export function Contact() {
                         name="fullName"
                         required
                         placeholder="e.g. Dr. Rajesh Kumar"
-                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm"
+                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-base"
                       />
                     </div>
 
                     <div>
                       <label
                         htmlFor="workEmail"
-                        className="block text-xs font-medium text-(--cs-cream) mb-1.5"
+                        className="block text-sm font-medium text-(--cs-cream) mb-1.5"
                       >
                         Work Email <span className="text-white/40">*</span>
                       </label>
@@ -165,14 +165,14 @@ export function Contact() {
                         name="workEmail"
                         required
                         placeholder="rajesh@clinic.com"
-                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm"
+                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-base"
                       />
                     </div>
 
                     <div>
                       <label
                         htmlFor="industry"
-                        className="block text-xs font-medium text-(--cs-cream) mb-1.5"
+                        className="block text-sm font-medium text-(--cs-cream) mb-1.5"
                       >
                         Business Type / Industry <span className="text-white/40">*</span>
                       </label>
@@ -182,14 +182,14 @@ export function Contact() {
                         name="industry"
                         required
                         placeholder="e.g. Healthcare, Hospitality, B2B Distribution"
-                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm"
+                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-base"
                       />
                     </div>
 
                     <div>
                       <label
                         htmlFor="bottleneck"
-                        className="block text-xs font-medium text-(--cs-cream) mb-1.5"
+                        className="block text-sm font-medium text-(--cs-cream) mb-1.5"
                       >
                         What is your biggest operational bottleneck right now?
                       </label>
@@ -198,7 +198,7 @@ export function Contact() {
                         name="bottleneck"
                         rows={3}
                         placeholder="e.g. Too many patient no-shows, manual spreadsheet invoicing, or missed after-hours leads..."
-                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-xs text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-sm resize-none"
+                        className="w-full rounded-xl bg-white/5 px-4 py-3 text-sm text-(--cs-cream) placeholder:text-(--cs-muted)/60 border border-white/10 transition-colors focus:border-white/30 focus:outline-none sm:text-base resize-none"
                       />
                     </div>
 

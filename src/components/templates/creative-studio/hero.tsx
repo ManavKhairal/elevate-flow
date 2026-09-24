@@ -134,7 +134,7 @@ export function Hero({
             <div className="col-span-12 flex flex-col gap-4 md:gap-6 lg:col-span-5 xl:col-span-4">
               <motion.p
                 {...fade(0.5)}
-                className="max-w-md text-xs leading-relaxed text-(--cs-ink)/75 sm:text-sm md:text-base"
+                className="max-w-md text-sm leading-relaxed text-(--cs-ink)/75 sm:text-base md:text-base"
               >
                 We architect high-speed web presences, intelligent WhatsApp
                 flows, and self-driving booking systems that capture every lead
@@ -157,7 +157,7 @@ export function Hero({
 
                 <a
                   href="#systems"
-                  className="group inline-flex w-fit items-center gap-1.5 rounded-full border border-white/20 px-5 py-3 text-xs font-medium text-(--cs-cream)/90 transition-colors hover:border-white/50 hover:text-(--cs-cream) sm:text-sm"
+                  className="group inline-flex w-fit items-center gap-1.5 rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-(--cs-cream)/90 transition-colors hover:border-white/50 hover:text-(--cs-cream) sm:text-base"
                 >
                   <span>Explore Systems</span>
                   <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-0.5" />
@@ -166,7 +166,7 @@ export function Hero({
 
               <motion.div
                 {...fade(0.85)}
-                className="flex items-center gap-2 text-xs text-(--cs-muted)"
+                className="flex items-center gap-2 text-sm text-(--cs-muted)"
               >
                 <span className="h-1 w-1 rounded-full bg-white/40" />
                 <span>No credit card required. Pay only if you love it.</span>

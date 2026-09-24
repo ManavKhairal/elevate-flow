@@ -56,14 +56,14 @@ export function Testimonials() {
         {/* Section Header with Editorial Journal Style */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between border-b border-white/10 pb-8">
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-xs">
+            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
               Client Voices · Case Journal
             </span>
             <h2 className="text-3xl leading-tight text-(--cs-cream) sm:text-4xl md:text-5xl">
               <WordsPullUp text="Endorsed by operators who value their time." />
             </h2>
           </div>
-          <p className="max-w-md text-xs text-(--cs-muted) sm:text-sm">
+          <p className="max-w-md text-sm text-(--cs-muted) sm:text-base">
             Documented perspectives from business owners after deploying custom
             ElevateFlow automated operational systems.
           </p>
@@ -82,7 +82,7 @@ export function Testimonials() {
             >
               <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-start lg:gap-12">
                 {/* Meta Column (Understated Index, Initial, Vertical) */}
-                <div className="flex items-center gap-3 font-mono text-xs text-(--cs-muted) lg:col-span-3 lg:flex-col lg:items-start lg:gap-2">
+                <div className="flex items-center gap-3 font-mono text-sm text-(--cs-muted) lg:col-span-3 lg:flex-col lg:items-start lg:gap-2">
                   <span className="text-(--cs-ink) font-medium tracking-wider">
                     [{item.index} / {item.initials}]
                   </span>
@@ -105,7 +105,7 @@ export function Testimonials() {
                       <span className="text-sm font-medium text-(--cs-cream) sm:text-base">
                         {item.name}
                       </span>
-                      <span className="text-xs text-(--cs-muted) block sm:inline sm:before:content-['·'] sm:before:mx-2">
+                      <span className="text-sm text-(--cs-muted) block sm:inline sm:before:content-['·'] sm:before:mx-2">
                         {item.role}
                       </span>
                     </div>

@@ -24,7 +24,7 @@ export function Navigation() {
     >
       <div className="flex items-center gap-3 sm:gap-6 md:gap-8 overflow-hidden">
         <ul
-          className="flex items-center gap-3.5 overflow-x-auto whitespace-nowrap text-xs sm:gap-6 md:gap-7 md:text-sm [&::-webkit-scrollbar]:hidden"
+          className="flex items-center gap-3.5 overflow-x-auto whitespace-nowrap text-sm sm:gap-6 md:gap-7 md:text-base [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none" }}
         >
           {NAV_ITEMS.map((item) => (
@@ -45,7 +45,7 @@ export function Navigation() {
 
         <a
           href="#contact"
-          className="group inline-flex items-center gap-1 rounded-full bg-(--cs-ink) px-2.5 py-1 text-[11px] font-medium text-black transition-all hover:bg-(--cs-cream) sm:px-3.5 sm:py-1.5 sm:text-xs"
+          className="group inline-flex items-center gap-1 rounded-full bg-(--cs-ink) px-2.5 py-1 text-[11px] font-medium text-black transition-all hover:bg-(--cs-cream) sm:px-3.5 sm:py-1.5 sm:text-sm"
         >
           <span>Consult</span>
           <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
