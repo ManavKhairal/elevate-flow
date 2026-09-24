@@ -23,7 +23,7 @@ export function Contact() {
     
     const formData = new FormData(e.currentTarget);
     
-    fetch("/", {
+    fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       // @ts-ignore
