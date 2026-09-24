@@ -35,7 +35,7 @@ export function RiskReversal() {
       <div className="container flex flex-col gap-14 md:gap-20">
         {/* Central Authoritative Statement */}
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
-          <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
+          <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
             Studio Charter
           </span>
 

@@ -56,7 +56,7 @@ export function Testimonials() {
         {/* Section Header with Editorial Journal Style */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between border-b border-white/10 pb-8">
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
+            <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
               Client Voices · Case Journal
             </span>
             <h2 className="text-3xl leading-tight text-(--cs-cream) sm:text-4xl md:text-5xl">
@@ -86,10 +86,10 @@ export function Testimonials() {
                   <span className="text-(--cs-ink) font-medium tracking-wider">
                     [{item.index} / {item.initials}]
                   </span>
-                  <span className="text-[10px] uppercase tracking-widest text-(--cs-muted)/80">
+                  <span className="text-xs uppercase tracking-widest text-(--cs-muted)/80">
                     {item.vertical}
                   </span>
-                  <span className="hidden text-[11px] text-emerald-400/90 lg:block mt-2">
+                  <span className="hidden text-sm text-emerald-400/90 lg:block mt-2">
                     {item.highlight}
                   </span>
                 </div>
@@ -110,7 +110,7 @@ export function Testimonials() {
                       </span>
                     </div>
 
-                    <span className="text-[11px] font-mono text-emerald-400/90 lg:hidden mt-2">
+                    <span className="text-sm font-mono text-emerald-400/90 lg:hidden mt-2">
                       {item.highlight}
                     </span>
                   </div>

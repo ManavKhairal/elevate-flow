@@ -17,7 +17,7 @@ export function Thesis() {
   return (
     <section id="about" className="bg-black px-4 py-20 sm:px-6 sm:py-28 md:py-32">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 rounded-[2rem] bg-[#101010] border border-white/5 px-6 py-16 text-center sm:px-10 sm:py-20 md:px-16 md:py-24">
-        <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
+        <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
           Operational Craft
         </span>
 

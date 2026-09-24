@@ -50,7 +50,7 @@ export function Footer() {
         {/* Top Call to Action Row */}
         <div className="flex flex-col gap-8 border-b border-white/10 pb-12 md:flex-row md:items-end md:justify-between">
           <div className="flex flex-col gap-5">
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
+            <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
               Boutique Digital Systems Studio
             </span>
             <h2 className="max-w-xl text-3xl leading-[0.95] tracking-[-0.02em] text-(--cs-cream) sm:text-4xl sm:leading-[0.9] md:text-5xl lg:text-6xl">
@@ -79,7 +79,7 @@ export function Footer() {
         >
           {LINK_COLUMNS.map((col) => (
             <div key={col.heading} className="flex flex-col gap-3">
-              <h3 className="text-[10px] font-mono uppercase tracking-[0.2em] text-(--cs-muted)">
+              <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-(--cs-muted)">
                 {col.heading}
               </h3>
               <ul className="flex flex-col gap-2.5">
@@ -98,7 +98,7 @@ export function Footer() {
           ))}
 
           <div className="col-span-2 flex flex-col gap-3 sm:col-span-1">
-            <h3 className="text-[10px] font-mono uppercase tracking-[0.2em] text-(--cs-muted)">
+            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-(--cs-muted)">
               Studio HQ
             </h3>
             <p className="text-sm leading-relaxed text-(--cs-cream)/70 sm:text-base">

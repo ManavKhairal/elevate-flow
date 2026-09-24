@@ -12,11 +12,11 @@ function ConceptualHealthcare() {
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
-          <span className="text-[11px] text-(--cs-ink)">
+          <span className="text-sm text-(--cs-ink)">
             WHATSAPP AUTOMATION PIPELINE
           </span>
         </div>
-        <span className="text-[10px] text-(--cs-muted)">LATENCY: 140ms</span>
+        <span className="text-xs text-(--cs-muted)">LATENCY: 140ms</span>
       </div>
 
       <div className="flex flex-col gap-3 py-4">
@@ -36,7 +36,7 @@ function ConceptualHealthcare() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-[10px] text-(--cs-muted)">
+      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-xs text-(--cs-muted)">
         <span>CALENDAR: SYNCHRONIZED</span>
         <span className="text-emerald-400">NO-SHOW RISK: NEUTRALIZED</span>
       </div>
@@ -50,11 +50,11 @@ function ConceptualHospitality() {
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-amber-400" />
-          <span className="text-[11px] text-(--cs-ink)">
+          <span className="text-sm text-(--cs-ink)">
             TABLE QR ROUTING ENGINE
           </span>
         </div>
-        <span className="text-[10px] text-(--cs-muted)">COMMISSION: 0%</span>
+        <span className="text-xs text-(--cs-muted)">COMMISSION: 0%</span>
       </div>
 
       <div className="flex flex-col gap-2.5 py-4">
@@ -62,7 +62,7 @@ function ConceptualHospitality() {
           <span className="text-(--cs-cream)">Table 04 · Live Session</span>
           <span className="text-emerald-400">Order #184 Direct</span>
         </div>
-        <div className="flex items-center justify-between text-[11px] text-(--cs-muted) px-1">
+        <div className="flex items-center justify-between text-sm text-(--cs-muted) px-1">
           <span>Auto Upsell: Activated</span>
           <span className="text-(--cs-ink)">AOV +20%</span>
         </div>
@@ -71,7 +71,7 @@ function ConceptualHospitality() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-[10px] text-(--cs-muted)">
+      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-xs text-(--cs-muted)">
         <span>KITCHEN PRINTER: DISPATCHED</span>
         <span className="text-(--cs-cream)">TABLE TURN: 30% FASTER</span>
       </div>
@@ -85,29 +85,29 @@ function ConceptualB2B() {
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-blue-400" />
-          <span className="text-[11px] text-(--cs-ink)">
+          <span className="text-sm text-(--cs-ink)">
             RECONCILIATION PIPELINE
           </span>
         </div>
-        <span className="text-[10px] text-(--cs-muted)">AUTO-MATCH</span>
+        <span className="text-xs text-(--cs-muted)">AUTO-MATCH</span>
       </div>
 
       <div className="grid grid-cols-3 gap-2 py-4 text-center">
         <div className="rounded bg-white/5 p-2">
           <span className="text-[9px] text-(--cs-muted) block">1. TRIGGER</span>
-          <span className="text-[10px] text-(--cs-cream)">CRM Milestone</span>
+          <span className="text-xs text-(--cs-cream)">CRM Milestone</span>
         </div>
         <div className="rounded bg-white/5 p-2 border border-white/20">
           <span className="text-[9px] text-(--cs-muted) block">2. INVOICE</span>
-          <span className="text-[10px] text-emerald-400">Auto Generated</span>
+          <span className="text-xs text-emerald-400">Auto Generated</span>
         </div>
         <div className="rounded bg-white/5 p-2">
           <span className="text-[9px] text-(--cs-muted) block">3. BANK</span>
-          <span className="text-[10px] text-(--cs-cream)">Ledger Synced</span>
+          <span className="text-xs text-(--cs-cream)">Ledger Synced</span>
         </div>
       </div>
 
-      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-[10px] text-(--cs-muted)">
+      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-xs text-(--cs-muted)">
         <span>CYCLE: 50% ACCELERATED</span>
         <span className="text-emerald-400">ERRORS: &lt; 0.01%</span>
       </div>
@@ -124,17 +124,17 @@ function AnimatedWaveform() {
       <div className="flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-purple-400" />
-          <span className="text-[11px] text-(--cs-ink)">
+          <span className="text-sm text-(--cs-ink)">
             STUDIO SESSION ENGINE
           </span>
         </div>
-        <span className="text-[10px] text-(--cs-muted)">ACOUSTIC FIDELITY</span>
+        <span className="text-xs text-(--cs-muted)">ACOUSTIC FIDELITY</span>
       </div>
 
       <div className="flex flex-col gap-3 py-4">
         <div className="flex items-center justify-between text-sm text-(--cs-cream)">
           <span>Studio.wav · Safdarjung Enclave</span>
-          <span className="text-purple-300 font-mono text-[10px]">
+          <span className="text-purple-300 font-mono text-xs">
             ACTIVE FREQUENCY SPECTRUM
           </span>
         </div>
@@ -167,7 +167,7 @@ function AnimatedWaveform() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-[10px] text-(--cs-muted)">
+      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-xs text-(--cs-muted)">
         <span>JSON-LD SCHEMA: ACTIVE</span>
         <span className="text-(--cs-cream)">DIRECT WHATSAPP BOOKING: 24/7</span>
       </div>
@@ -184,7 +184,7 @@ export function CaseStudies() {
         {/* Section Header */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between border-b border-white/5 pb-8">
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
+            <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
               Selected Work
             </span>
             <h2 className="text-3xl leading-tight text-(--cs-cream) sm:text-4xl md:text-5xl">
@@ -211,7 +211,7 @@ export function CaseStudies() {
               <div className="flex flex-col justify-between lg:col-span-6">
                 <div>
                   <div className="flex items-center justify-between pb-4">
-                    <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
+                    <span className="text-xs font-mono tracking-widest text-(--cs-muted)">
                       01 / FEATURED DEPLOYMENT · HEALTHCARE
                     </span>
                     <span className="text-sm text-(--cs-ink)/80 font-mono">
@@ -235,7 +235,7 @@ export function CaseStudies() {
                     <span className="font-mono text-3xl font-semibold tracking-tight text-(--cs-cream) sm:text-4xl">
                       40%
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                    <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       No-Show Reduction
                     </span>
                   </div>
@@ -243,7 +243,7 @@ export function CaseStudies() {
                     <span className="font-mono text-3xl font-semibold tracking-tight text-(--cs-cream) sm:text-4xl">
                       15 hrs/wk
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                    <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       Staff Hours Reclaimed
                     </span>
                   </div>
@@ -278,7 +278,7 @@ export function CaseStudies() {
             >
               <div>
                 <div className="flex items-center justify-between pb-4">
-                  <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
+                  <span className="text-xs font-mono tracking-widest text-(--cs-muted)">
                     02 / HOSPITALITY &amp; DINING
                   </span>
                   <span className="text-sm text-(--cs-ink)/80 font-mono">
@@ -306,7 +306,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     30%
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                  <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Faster Table Turn
                   </span>
                 </div>
@@ -314,7 +314,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     +20%
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                  <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Average Order Value
                   </span>
                 </div>
@@ -331,7 +331,7 @@ export function CaseStudies() {
             >
               <div>
                 <div className="flex items-center justify-between pb-4">
-                  <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
+                  <span className="text-xs font-mono tracking-widest text-(--cs-muted)">
                     03 / B2B SERVICE OPERATIONS
                   </span>
                   <span className="text-sm text-(--cs-ink)/80 font-mono">
@@ -359,7 +359,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     50%
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                  <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Faster Payment Cycle
                   </span>
                 </div>
@@ -367,7 +367,7 @@ export function CaseStudies() {
                   <span className="font-mono text-2xl font-semibold tracking-tight text-(--cs-cream) sm:text-3xl">
                     15 hrs/mo
                   </span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                  <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                     Bookkeeping Saved
                   </span>
                 </div>
@@ -387,7 +387,7 @@ export function CaseStudies() {
               <div className="flex flex-col justify-between lg:col-span-6">
                 <div>
                   <div className="flex items-center justify-between pb-4">
-                    <span className="text-[10px] font-mono tracking-widest text-(--cs-muted)">
+                    <span className="text-xs font-mono tracking-widest text-(--cs-muted)">
                       04 / CREATIVE &amp; AUDIO PRODUCTION
                     </span>
                     <span className="text-sm text-(--cs-ink)/80 font-mono">
@@ -411,7 +411,7 @@ export function CaseStudies() {
                     <span className="font-mono text-base font-medium tracking-tight text-(--cs-cream) sm:text-xl block">
                       Integrated Booking Experience
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                    <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       Core Deliverable
                     </span>
                   </div>
@@ -419,7 +419,7 @@ export function CaseStudies() {
                     <span className="font-mono text-3xl font-semibold tracking-tight text-(--cs-cream) sm:text-4xl">
                       24/7
                     </span>
-                    <span className="mt-1 block text-[10px] uppercase tracking-wider text-(--cs-muted) sm:text-sm">
+                    <span className="mt-1 block text-xs uppercase tracking-wider text-(--cs-muted) sm:text-sm">
                       Session Inflow Engine
                     </span>
                   </div>

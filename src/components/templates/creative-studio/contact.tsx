@@ -47,7 +47,7 @@ export function Contact() {
             {/* Left Column: Narrative & Direct Channels */}
             <div className="flex flex-col justify-between lg:col-span-5">
               <div className="flex flex-col gap-4">
-                <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
+                <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
                   Start A Project
                 </span>
 
@@ -68,7 +68,7 @@ export function Contact() {
               {/* Direct Channels */}
               <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-(--cs-muted)">
+                  <span className="text-xs font-mono uppercase tracking-wider text-(--cs-muted)">
                     DIRECT EMAIL
                   </span>
                   <a
@@ -80,7 +80,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-(--cs-muted)">
+                  <span className="text-xs font-mono uppercase tracking-wider text-(--cs-muted)">
                     WHATSAPP CONCIERGE HOTLINE
                   </span>
                   <div className="mt-1.5 flex items-center gap-3">
@@ -97,7 +97,7 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="rounded-xl bg-white/5 p-4 text-[11px] text-(--cs-muted) border border-white/5">
+                <div className="rounded-xl bg-white/5 p-4 text-sm text-(--cs-muted) border border-white/5">
                   <span className="font-medium text-(--cs-ink) block mb-0.5">
                     Zero Risk Guarantee
                   </span>
@@ -213,7 +213,7 @@ export function Contact() {
                       </button>
                     </div>
 
-                    <p className="text-center text-[11px] text-(--cs-muted)">
+                    <p className="text-center text-sm text-(--cs-muted)">
                       We respect your privacy. No spam, ever.
                     </p>
                   </form>

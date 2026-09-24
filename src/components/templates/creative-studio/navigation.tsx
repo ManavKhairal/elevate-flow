@@ -45,7 +45,7 @@ export function Navigation() {
 
         <a
           href="#contact"
-          className="group inline-flex items-center gap-1 rounded-full bg-(--cs-ink) px-2.5 py-1 text-[11px] font-medium text-black transition-all hover:bg-(--cs-cream) sm:px-3.5 sm:py-1.5 sm:text-sm"
+          className="group inline-flex items-center gap-1 rounded-full bg-(--cs-ink) px-2.5 py-1 text-sm font-medium text-black transition-all hover:bg-(--cs-cream) sm:px-3.5 sm:py-1.5 sm:text-sm"
         >
           <span>Consult</span>
           <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -83,7 +83,7 @@ export function Hero({
         <Navigation />
 
         {/* Subtle Operational System Status Bar (Restrained Telemetry) */}
-        <div className="relative z-10 hidden items-center justify-between px-6 pt-16 text-[11px] font-mono tracking-wider text-(--cs-muted) sm:flex md:px-10 md:pt-20">
+        <div className="relative z-10 hidden items-center justify-between px-6 pt-16 text-sm font-mono tracking-wider text-(--cs-muted) sm:flex md:px-10 md:pt-20">
           <div className="flex items-center gap-2">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
@@ -108,7 +108,7 @@ export function Hero({
             <div className="col-span-12 lg:col-span-7 xl:col-span-8">
               <div className="mb-3 flex items-center gap-2 sm:hidden">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                <span className="text-[10px] font-mono uppercase tracking-widest text-(--cs-muted)">
+                <span className="text-xs font-mono uppercase tracking-widest text-(--cs-muted)">
                   NOW ACCEPTING SELECT PROJECTS
                 </span>
               </div>

@@ -189,7 +189,7 @@ export function Features({ videoSrc }: { videoSrc?: string }) {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-black/40 sm:h-12 sm:w-12">
                     <card.Icon className="h-5 w-5 text-(--cs-ink) sm:h-6 sm:w-6" />
                   </div>
-                  <span className="font-mono text-[10px] tabular-nums text-(--cs-muted)">
+                  <span className="font-mono text-xs tabular-nums text-(--cs-muted)">
                     {card.number}
                   </span>
                 </div>

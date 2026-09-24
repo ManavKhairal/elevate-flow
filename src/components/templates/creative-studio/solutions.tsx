@@ -162,7 +162,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
 
       <div className="relative container flex flex-col gap-12 md:gap-16">
         <div className="flex flex-col items-center gap-2 text-center">
-          <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
+          <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
             Core Architecture
           </span>
           <WordsPullUp
@@ -243,7 +243,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
                           {card.tag}
                         </span>
                       )}
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-(--cs-muted) block">
+                      <span className="font-mono text-xs uppercase tracking-wider text-(--cs-muted) block">
                         {card.pillar}
                       </span>
                       <span className="font-mono text-sm tabular-nums text-(--cs-ink)">
@@ -265,7 +265,7 @@ export function Solutions({ videoSrc }: { videoSrc?: string }) {
                       >
                         <span
                           className={cn(
-                            "font-mono select-none text-[11px]",
+                            "font-mono select-none text-sm",
                             card.isHeroPillar ? "text-(--cs-cream)/70" : "text-white/30",
                           )}
                           aria-hidden
