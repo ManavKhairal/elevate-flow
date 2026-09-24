@@ -1,0 +1,27 @@
+- generic [active] [ref=f8e1]:
+  - main [ref=f8e2]:
+    - generic [ref=f8e3]:
+      - link "Return to Studio" [ref=f8e4] [cursor=pointer]:
+        - /url: /
+      - heading "Privacy Policy" [level=1] [ref=f8e8]
+      - paragraph [ref=f8e9]: "Last Updated: July 17, 2026"
+      - generic [ref=f8e10]:
+        - generic [ref=f8e11]:
+          - heading "1. Information We Collect" [level=2] [ref=f8e12]
+          - paragraph [ref=f8e13]: When you request a diagnostic consultation or engage with ElevateFlow ("Company", "we", "us", "our"), we collect business information (company name, industry, operational bottlenecks), personal contact details (full name, work email, phone number), and communication records needed to assess and deploy custom digital systems.
+        - generic [ref=f8e14]:
+          - heading "2. How We Use Your Information" [level=2] [ref=f8e15]
+          - paragraph [ref=f8e16]: Your data is utilized strictly to provide diagnostic analysis, engineer custom automation workflows, tailor digital systems to your operational reality, and provide ongoing technical support. We do not sell, rent, or trade your personal or business data.
+        - generic [ref=f8e17]:
+          - heading "3. Data Security & Storage" [level=2] [ref=f8e18]
+          - paragraph [ref=f8e19]: We implement industry-standard encryption and operational access controls. Client credentials and system webhooks are stored using secure environment configurations.
+        - generic [ref=f8e20]:
+          - heading "4. Governing Law & Jurisdiction" [level=2] [ref=f8e21]
+          - paragraph [ref=f8e22]: This policy is governed by and construed in accordance with the laws of India. Any disputes arising shall be subject to the exclusive jurisdiction of the courts in New Delhi, India.
+        - generic [ref=f8e23]:
+          - heading "5. Contact Us" [level=2] [ref=f8e24]
+          - paragraph [ref=f8e25]:
+            - text: "For inquiries regarding data privacy:"
+            - link "hello@elevateflow.in" [ref=f8e26] [cursor=pointer]:
+              - /url: mailto:hello@elevateflow.in
+  - button "Open Next.js Dev Tools" [ref=f8e32] [cursor=pointer]

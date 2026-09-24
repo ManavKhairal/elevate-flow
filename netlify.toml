@@ -1,9 +1,0 @@
-[build]
-  command = "echo 'Building static site to trigger Netlify form processing...'"
-  publish = "."
-
-[build.processing]
-  skip_processing = false
-
-[build.processing.html]
-  pretty_urls = true

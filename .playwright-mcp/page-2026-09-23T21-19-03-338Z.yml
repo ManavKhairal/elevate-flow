@@ -1,0 +1,27 @@
+- generic [active] [ref=f4e1]:
+  - main [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "Return to Studio" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+      - heading "Terms of Service" [level=1] [ref=f4e8]
+      - paragraph [ref=f4e9]: "Last Updated: July 17, 2026"
+      - generic [ref=f4e10]:
+        - generic [ref=f4e11]:
+          - heading "1. Acceptance of Terms" [level=2] [ref=f4e12]
+          - paragraph [ref=f4e13]: By accessing or using the services provided by ElevateFlow ("Company", "we", "us", "our"), you agree to be bound by these Terms of Service.
+        - generic [ref=f4e14]:
+          - heading "2. Scope of Services" [level=2] [ref=f4e15]
+          - paragraph [ref=f4e16]: ElevateFlow provides bespoke web development, workflow automation, messaging integrations, CRM webhooks, and digital systems architecture on a project-by-project basis. Deliverables and system specifications are scoped during initial diagnostic consultations.
+        - generic [ref=f4e17]:
+          - heading "3. Outcome Transparency" [level=2] [ref=f4e18]
+          - paragraph [ref=f4e19]: While our systems are engineered to reduce manual workload and increase inquiry capture, business outcomes remain dependent on individual operational factors, market conditions, and client execution. Case studies shared represent documented results from specific client deployments.
+        - generic [ref=f4e20]:
+          - heading "4. Governing Law & Jurisdiction" [level=2] [ref=f4e21]
+          - paragraph [ref=f4e22]: These Terms shall be governed by and interpreted in accordance with the laws of India. Any legal dispute or proceeding shall be subject to the exclusive jurisdiction of the courts located in New Delhi, India.
+        - generic [ref=f4e23]:
+          - heading "5. Inquiries" [level=2] [ref=f4e24]
+          - paragraph [ref=f4e25]:
+            - text: "Questions regarding service terms should be directed to:"
+            - link "hello@elevateflow.in" [ref=f4e26] [cursor=pointer]:
+              - /url: mailto:hello@elevateflow.in
+  - button "Open Next.js Dev Tools" [ref=f4e32] [cursor=pointer]

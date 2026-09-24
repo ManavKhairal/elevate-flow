@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "ElevateFlow — Boutique Digital Systems Studio",
+  description:
+    "We architect high-performance digital front doors and self-driving business systems for growing independent companies.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className="dark bg-black antialiased" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <body className="bg-black text-[#dedbc8] min-h-screen" suppressHydrationWarning>{children}</body>
+    </html>
+  );
+}

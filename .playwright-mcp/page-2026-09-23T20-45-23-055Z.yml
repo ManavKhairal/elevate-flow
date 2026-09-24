@@ -1,0 +1,674 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - navigation "Main Navigation" [ref=e8]:
+        - generic [ref=e9]:
+          - link "ElevateFlow" [ref=e10] [cursor=pointer]:
+            - /url: "#"
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "About" [ref=e14] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e15]:
+              - link "Solutions" [ref=e16] [cursor=pointer]:
+                - /url: "#solutions"
+            - listitem [ref=e17]:
+              - link "Systems" [ref=e18] [cursor=pointer]:
+                - /url: "#systems"
+            - listitem [ref=e19]:
+              - link "Results" [ref=e20] [cursor=pointer]:
+                - /url: "#results"
+            - listitem [ref=e21]:
+              - link "Process" [ref=e22] [cursor=pointer]:
+                - /url: "#process"
+          - link "Consultation" [ref=e24] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e29]:
+        - generic [ref=e30]: NOW ACCEPTING SELECT PROJECTS
+        - generic [ref=e35]:
+          - generic [ref=e36]: BOUTIQUE DIGITAL SYSTEMS STUDIO
+          - generic [ref=e37]: /
+          - generic [ref=e38]: NEW DELHI · GLOBAL REACH
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - heading "ElevateFlo w *" [level=1] [ref=e42]:
+            - generic [ref=e44]:
+              - text: ElevateFlo
+              - generic [ref=e45]:
+                - text: w
+                - generic [ref=e46]: "*"
+          - paragraph [ref=e47]: High-performance digital front doors. Self-driving business systems.
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: We architect high-speed web presences, intelligent WhatsApp flows, and self-driving booking systems that capture every lead and scale your business without operational drag.
+          - generic [ref=e50]:
+            - link [ref=e51] [cursor=pointer]:
+              - /url: "#contact"
+            - link "Explore Systems" [ref=e55] [cursor=pointer]:
+              - /url: "#systems"
+          - generic [ref=e59]: No credit card required. Pay only if you love it.
+    - generic [ref=e63]:
+      - generic [ref=e64]: Operational Craft
+      - heading "We solve the silent bottlenecks that cap business growth." [level=2] [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]: We
+          - generic [ref=e68]: solve
+          - generic [ref=e69]: the
+          - generic [ref=e70]: silent
+          - generic [ref=e71]: bottlenecks
+          - generic [ref=e72]: that
+          - generic [ref=e73]: cap
+          - generic [ref=e74]: business
+          - generic [ref=e75]: growth.
+      - paragraph [ref=e76]:
+        - generic [ref=e77]:
+          - generic [aria-hidden] [ref=e78]: M
+          - generic [aria-hidden] [ref=e79]: o
+          - generic [aria-hidden] [ref=e80]: s
+          - generic [aria-hidden] [ref=e81]: t
+        - generic [ref=e82]:
+          - generic [aria-hidden] [ref=e83]: b
+          - generic [aria-hidden] [ref=e84]: u
+          - generic [aria-hidden] [ref=e85]: s
+          - generic [aria-hidden] [ref=e86]: i
+          - generic [aria-hidden] [ref=e87]: "n"
+          - generic [aria-hidden] [ref=e88]: e
+          - generic [aria-hidden] [ref=e89]: s
+          - generic [aria-hidden] [ref=e90]: s
+          - generic [aria-hidden] [ref=e91]: e
+          - generic [aria-hidden] [ref=e92]: s
+        - generic [ref=e93]:
+          - generic [aria-hidden] [ref=e94]: d
+          - generic [aria-hidden] [ref=e95]: o
+        - generic [ref=e96]:
+          - generic [aria-hidden] [ref=e97]: "n"
+          - generic [aria-hidden] [ref=e98]: o
+          - generic [aria-hidden] [ref=e99]: t
+        - generic [ref=e100]:
+          - generic [aria-hidden] [ref=e101]: h
+          - generic [aria-hidden] [ref=e102]: a
+          - generic [aria-hidden] [ref=e103]: v
+          - generic [aria-hidden] [ref=e104]: e
+        - generic [aria-hidden] [ref=e106]: a
+        - generic [ref=e107]:
+          - generic [aria-hidden] [ref=e108]: t
+          - generic [aria-hidden] [ref=e109]: r
+          - generic [aria-hidden] [ref=e110]: a
+          - generic [aria-hidden] [ref=e111]: f
+          - generic [aria-hidden] [ref=e112]: f
+          - generic [aria-hidden] [ref=e113]: i
+          - generic [aria-hidden] [ref=e114]: c
+        - generic [ref=e115]:
+          - generic [aria-hidden] [ref=e116]: p
+          - generic [aria-hidden] [ref=e117]: r
+          - generic [aria-hidden] [ref=e118]: o
+          - generic [aria-hidden] [ref=e119]: b
+          - generic [aria-hidden] [ref=e120]: l
+          - generic [aria-hidden] [ref=e121]: e
+          - generic [aria-hidden] [ref=e122]: m
+          - generic [aria-hidden] [ref=e123]: —
+          - generic [aria-hidden] [ref=e124]: t
+          - generic [aria-hidden] [ref=e125]: h
+          - generic [aria-hidden] [ref=e126]: e
+          - generic [aria-hidden] [ref=e127]: "y"
+        - generic [ref=e128]:
+          - generic [aria-hidden] [ref=e129]: h
+          - generic [aria-hidden] [ref=e130]: a
+          - generic [aria-hidden] [ref=e131]: v
+          - generic [aria-hidden] [ref=e132]: e
+        - generic [aria-hidden] [ref=e134]: a
+        - generic [ref=e135]:
+          - generic [aria-hidden] [ref=e136]: s
+          - generic [aria-hidden] [ref=e137]: "y"
+          - generic [aria-hidden] [ref=e138]: s
+          - generic [aria-hidden] [ref=e139]: t
+          - generic [aria-hidden] [ref=e140]: e
+          - generic [aria-hidden] [ref=e141]: m
+          - generic [aria-hidden] [ref=e142]: s
+        - generic [ref=e143]:
+          - generic [aria-hidden] [ref=e144]: b
+          - generic [aria-hidden] [ref=e145]: o
+          - generic [aria-hidden] [ref=e146]: t
+          - generic [aria-hidden] [ref=e147]: t
+          - generic [aria-hidden] [ref=e148]: l
+          - generic [aria-hidden] [ref=e149]: e
+          - generic [aria-hidden] [ref=e150]: "n"
+          - generic [aria-hidden] [ref=e151]: e
+          - generic [aria-hidden] [ref=e152]: c
+          - generic [aria-hidden] [ref=e153]: k
+          - generic [aria-hidden] [ref=e154]: .
+        - generic [ref=e155]:
+          - generic [aria-hidden] [ref=e156]: W
+          - generic [aria-hidden] [ref=e157]: e
+        - generic [ref=e158]:
+          - generic [aria-hidden] [ref=e159]: r
+          - generic [aria-hidden] [ref=e160]: e
+          - generic [aria-hidden] [ref=e161]: p
+          - generic [aria-hidden] [ref=e162]: l
+          - generic [aria-hidden] [ref=e163]: a
+          - generic [aria-hidden] [ref=e164]: c
+          - generic [aria-hidden] [ref=e165]: e
+        - generic [ref=e166]:
+          - generic [aria-hidden] [ref=e167]: m
+          - generic [aria-hidden] [ref=e168]: a
+          - generic [aria-hidden] [ref=e169]: "n"
+          - generic [aria-hidden] [ref=e170]: u
+          - generic [aria-hidden] [ref=e171]: a
+          - generic [aria-hidden] [ref=e172]: l
+        - generic [ref=e173]:
+          - generic [aria-hidden] [ref=e174]: f
+          - generic [aria-hidden] [ref=e175]: r
+          - generic [aria-hidden] [ref=e176]: i
+          - generic [aria-hidden] [ref=e177]: c
+          - generic [aria-hidden] [ref=e178]: t
+          - generic [aria-hidden] [ref=e179]: i
+          - generic [aria-hidden] [ref=e180]: o
+          - generic [aria-hidden] [ref=e181]: "n"
+          - generic [aria-hidden] [ref=e182]: ","
+        - generic [ref=e183]:
+          - generic [aria-hidden] [ref=e184]: m
+          - generic [aria-hidden] [ref=e185]: i
+          - generic [aria-hidden] [ref=e186]: s
+          - generic [aria-hidden] [ref=e187]: s
+          - generic [aria-hidden] [ref=e188]: e
+          - generic [aria-hidden] [ref=e189]: d
+        - generic [ref=e190]:
+          - generic [aria-hidden] [ref=e191]: c
+          - generic [aria-hidden] [ref=e192]: a
+          - generic [aria-hidden] [ref=e193]: l
+          - generic [aria-hidden] [ref=e194]: l
+          - generic [aria-hidden] [ref=e195]: s
+          - generic [aria-hidden] [ref=e196]: ","
+        - generic [ref=e197]:
+          - generic [aria-hidden] [ref=e198]: a
+          - generic [aria-hidden] [ref=e199]: "n"
+          - generic [aria-hidden] [ref=e200]: d
+        - generic [ref=e201]:
+          - generic [aria-hidden] [ref=e202]: d
+          - generic [aria-hidden] [ref=e203]: a
+          - generic [aria-hidden] [ref=e204]: t
+          - generic [aria-hidden] [ref=e205]: a
+        - generic [ref=e206]:
+          - generic [aria-hidden] [ref=e207]: e
+          - generic [aria-hidden] [ref=e208]: "n"
+          - generic [aria-hidden] [ref=e209]: t
+          - generic [aria-hidden] [ref=e210]: r
+          - generic [aria-hidden] [ref=e211]: "y"
+        - generic [ref=e212]:
+          - generic [aria-hidden] [ref=e213]: w
+          - generic [aria-hidden] [ref=e214]: i
+          - generic [aria-hidden] [ref=e215]: t
+          - generic [aria-hidden] [ref=e216]: h
+        - generic [ref=e217]:
+          - generic [aria-hidden] [ref=e218]: c
+          - generic [aria-hidden] [ref=e219]: u
+          - generic [aria-hidden] [ref=e220]: s
+          - generic [aria-hidden] [ref=e221]: t
+          - generic [aria-hidden] [ref=e222]: o
+          - generic [aria-hidden] [ref=e223]: m
+        - generic [ref=e224]:
+          - generic [aria-hidden] [ref=e225]: t
+          - generic [aria-hidden] [ref=e226]: o
+          - generic [aria-hidden] [ref=e227]: o
+          - generic [aria-hidden] [ref=e228]: l
+          - generic [aria-hidden] [ref=e229]: s
+        - generic [ref=e230]:
+          - generic [aria-hidden] [ref=e231]: e
+          - generic [aria-hidden] [ref=e232]: "n"
+          - generic [aria-hidden] [ref=e233]: g
+          - generic [aria-hidden] [ref=e234]: i
+          - generic [aria-hidden] [ref=e235]: "n"
+          - generic [aria-hidden] [ref=e236]: e
+          - generic [aria-hidden] [ref=e237]: e
+          - generic [aria-hidden] [ref=e238]: r
+          - generic [aria-hidden] [ref=e239]: e
+          - generic [aria-hidden] [ref=e240]: d
+        - generic [ref=e241]:
+          - generic [aria-hidden] [ref=e242]: a
+          - generic [aria-hidden] [ref=e243]: r
+          - generic [aria-hidden] [ref=e244]: o
+          - generic [aria-hidden] [ref=e245]: u
+          - generic [aria-hidden] [ref=e246]: "n"
+          - generic [aria-hidden] [ref=e247]: d
+        - generic [ref=e248]:
+          - generic [aria-hidden] [ref=e249]: "y"
+          - generic [aria-hidden] [ref=e250]: o
+          - generic [aria-hidden] [ref=e251]: u
+          - generic [aria-hidden] [ref=e252]: r
+        - generic [ref=e253]:
+          - generic [aria-hidden] [ref=e254]: d
+          - generic [aria-hidden] [ref=e255]: a
+          - generic [aria-hidden] [ref=e256]: i
+          - generic [aria-hidden] [ref=e257]: l
+          - generic [aria-hidden] [ref=e258]: "y"
+        - generic [ref=e259]:
+          - generic [aria-hidden] [ref=e260]: r
+          - generic [aria-hidden] [ref=e261]: e
+          - generic [aria-hidden] [ref=e262]: a
+          - generic [aria-hidden] [ref=e263]: l
+          - generic [aria-hidden] [ref=e264]: i
+          - generic [aria-hidden] [ref=e265]: t
+          - generic [aria-hidden] [ref=e266]: "y"
+          - generic [aria-hidden] [ref=e267]: .
+      - generic [ref=e268]:
+        - generic [ref=e269]: DIAGNOSTIC FIRST
+        - generic [ref=e271]: BESPOKE ENGINEERING
+        - generic [ref=e273]: ZERO JARGON
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - generic [ref=e277]: Core Architecture
+        - generic [ref=e278]:
+          - generic [ref=e279]: Engineered
+          - generic [ref=e280]: systems
+          - generic [ref=e281]: for
+          - generic [ref=e282]: daily
+          - generic [ref=e283]: operations.
+        - generic [ref=e284]:
+          - generic [ref=e285]: Three
+          - generic [ref=e286]: interconnected
+          - generic [ref=e287]: pillars.
+          - generic [ref=e288]: Zero
+          - generic [ref=e289]: generic
+          - generic [ref=e290]: templates.
+      - generic [ref=e291]:
+        - generic [ref=e297]:
+          - generic [ref=e298]: PHILOSOPHY
+          - paragraph [ref=e299]: Bespoke Digital Infrastructure.
+          - paragraph [ref=e300]: Every workflow, interface, and automation is engineered around how the business actually operates.
+        - generic [ref=e302]:
+          - generic [ref=e312]:
+            - generic [ref=e313]: ACQUIRE
+            - text: "01"
+          - heading "Digital Front Doors & Demand Capture." [level=3] [ref=e314]
+          - list [ref=e315]:
+            - listitem [ref=e316]:
+              - generic [ref=e319]: High-conversion bespoke web architecture
+            - listitem [ref=e320]:
+              - generic [ref=e323]: Local SEO & structured entity schema
+            - listitem [ref=e324]:
+              - generic [ref=e327]: Inbound lead capture & instant routing
+            - listitem [ref=e328]:
+              - generic [ref=e331]: Webhook pipelines from ads & aggregators
+          - link "Scope this system" [ref=e332] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e338]:
+          - generic [ref=e343]:
+            - generic [ref=e344]: CONVERT
+            - text: "02"
+          - heading "Conversational Sales & Smart Booking." [level=3] [ref=e345]
+          - list [ref=e346]:
+            - listitem [ref=e347]:
+              - generic [ref=e350]: 24/7 intelligent WhatsApp automation
+            - listitem [ref=e351]:
+              - generic [ref=e354]: Self-driving appointment scheduling
+            - listitem [ref=e355]:
+              - generic [ref=e358]: Automated SMS/WhatsApp reminders
+            - listitem [ref=e359]:
+              - generic [ref=e362]: Upfront deposit collection & QR dining systems
+          - link "Scope this system" [ref=e363] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e369]:
+          - generic [ref=e375]:
+            - generic [ref=e376]: OPERATE
+            - text: "03"
+          - heading "Automated Workflows & Back-Office Sync." [level=3] [ref=e377]
+          - list [ref=e378]:
+            - listitem [ref=e379]:
+              - generic [ref=e382]: Business process automation across apps
+            - listitem [ref=e383]:
+              - generic [ref=e386]: Automated invoice triggers & bank sync
+            - listitem [ref=e387]:
+              - generic [ref=e390]: Direct CRM & spreadsheet sync
+            - listitem [ref=e391]:
+              - generic [ref=e394]: Operational KPI dashboards & clinic records
+          - link "Scope this system" [ref=e395] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e401]:
+      - generic [ref=e402]:
+        - generic [ref=e403]:
+          - generic [ref=e404]: Selected Work
+          - heading "Real systems. Documented outcomes." [level=2] [ref=e405]:
+            - generic [ref=e406]:
+              - generic [ref=e407]: Real
+              - generic [ref=e408]: systems.
+              - generic [ref=e409]: Documented
+              - generic [ref=e410]: outcomes.
+        - paragraph [ref=e411]: We measure engineering craft not by subjective aesthetics alone, but by recovered hours and captured revenue.
+      - generic [ref=e412]:
+        - article [ref=e413]:
+          - generic [ref=e414]:
+            - generic [ref=e415]:
+              - generic [ref=e416]: HEALTHCARE & CLINICAL
+              - generic [ref=e417]: "CLIENT: Dr. Rajesh Kumar"
+            - heading "Automated WhatsApp Booking & No-Show Shield" [level=3] [ref=e418]
+            - paragraph [ref=e419]: Replaced manual front-desk phone tag and paper registers with an automated 24/7 WhatsApp scheduling flow and two-way 24-hour appointment confirmations.
+          - generic [ref=e421]:
+            - generic [ref=e422]:
+              - generic [ref=e423]: WHATSAPP AUTOMATION PIPELINE
+              - generic [ref=e426]: "LATENCY: 140ms"
+            - generic [ref=e427]:
+              - generic [ref=e428]:
+                - paragraph [ref=e429]: SYSTEM TRIGGER · 24H CONFIRMATION
+                - paragraph [ref=e430]: "\"Dr. Kumar Clinic: Reminder for checkup tomorrow at 2:00 PM. Reply Y to confirm, N to reschedule.\""
+              - generic [ref=e431]: "\"Y — confirmed\""
+            - generic [ref=e432]:
+              - generic [ref=e433]: "CALENDAR: SYNCHRONIZED"
+              - generic [ref=e434]: "NO-SHOW RISK: NEUTRALIZED"
+          - generic [ref=e435]:
+            - generic [ref=e436]:
+              - text: 40%
+              - generic [ref=e437]: Reduction in Patient No-Shows
+            - generic [ref=e438]:
+              - text: 15 hrs/wk
+              - generic [ref=e439]: Staff Administrative Time Reclaimed
+          - link "Request system briefing" [ref=e441] [cursor=pointer]:
+            - /url: "#contact"
+        - article [ref=e446]:
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]: HOSPITALITY & DINING
+              - generic [ref=e450]: "CLIENT: Sneha's Restaurant"
+            - heading "QR Menu & Direct Kitchen Ordering Architecture" [level=3] [ref=e451]
+            - paragraph [ref=e452]: Eliminated third-party aggregator commissions and waitstaff ordering bottlenecks with high-speed table QR ordering routed directly to the kitchen display.
+          - generic [ref=e454]:
+            - generic [ref=e455]:
+              - generic [ref=e456]: TABLE QR ROUTING ENGINE
+              - generic [ref=e459]: "COMMISSION: 0%"
+            - generic [ref=e460]:
+              - generic [ref=e461]:
+                - generic [ref=e462]: Table 04 · Live Session
+                - generic [ref=e463]: "Order #184 Direct"
+              - generic [ref=e464]:
+                - generic [ref=e465]: "Auto Upsell: Activated"
+                - generic [ref=e466]: AOV +20%
+            - generic [ref=e469]:
+              - generic [ref=e470]: "KITCHEN PRINTER: DISPATCHED"
+              - generic [ref=e471]: "TABLE TURN: 30% FASTER"
+          - generic [ref=e472]:
+            - generic [ref=e473]:
+              - text: 30%
+              - generic [ref=e474]: Faster Table Turnover
+            - generic [ref=e475]:
+              - text: 20%
+              - generic [ref=e476]: Increase in Average Order Value
+          - link "Request system briefing" [ref=e478] [cursor=pointer]:
+            - /url: "#contact"
+        - article [ref=e483]:
+          - generic [ref=e484]:
+            - generic [ref=e485]:
+              - generic [ref=e486]: B2B SERVICE OPERATIONS
+              - generic [ref=e487]: "CLIENT: Amit's Business"
+            - heading "Automated Invoicing & Payment Reconciliation Flow" [level=3] [ref=e488]
+            - paragraph [ref=e489]: Automated manual data entry between project completion, billing triggers, and bank deposit reconciliation, eliminating 40+ hours of monthly manual accounting.
+          - generic [ref=e491]:
+            - generic [ref=e492]:
+              - generic [ref=e493]: RECONCILIATION PIPELINE
+              - generic [ref=e496]: AUTO-MATCH
+            - generic [ref=e497]:
+              - generic [ref=e498]:
+                - generic [ref=e499]: 1. TRIGGER
+                - text: CRM Milestone
+              - generic [ref=e500]:
+                - generic [ref=e501]: 2. INVOICE
+                - text: Auto Generated
+              - generic [ref=e502]:
+                - generic [ref=e503]: 3. BANK
+                - text: Ledger Synced
+            - generic [ref=e504]:
+              - generic [ref=e505]: "CYCLE: 50% ACCELERATED"
+              - generic [ref=e506]: "ERRORS: < 0.01%"
+          - generic [ref=e507]:
+            - generic [ref=e508]:
+              - text: 50%
+              - generic [ref=e509]: Faster Payment Collection Cycle
+            - generic [ref=e510]:
+              - text: 15 hrs/mo
+              - generic [ref=e511]: Manual Bookkeeping Saved Monthly
+          - link "Request system briefing" [ref=e513] [cursor=pointer]:
+            - /url: "#contact"
+        - article [ref=e518]:
+          - generic [ref=e519]:
+            - generic [ref=e520]:
+              - generic [ref=e521]: CREATIVE & AUDIO PRODUCTION
+              - generic [ref=e522]: "CLIENT: Studio.wav"
+            - heading "High-Fidelity Studio Web Presence & Session Engine" [level=3] [ref=e523]
+            - paragraph [ref=e524]: Designed a sleek, dark-canvas digital experience for an elite New Delhi studio, pairing an embedded audio portfolio with direct WhatsApp session reservations.
+          - generic [ref=e526]:
+            - generic [ref=e527]:
+              - generic [ref=e528]: STUDIO SESSION ENGINE
+              - generic [ref=e531]: HIGH FIDELITY
+            - generic [ref=e533]:
+              - generic [ref=e534]: Studio.wav · Safdarjung Enclave
+              - generic [ref=e535]: Live Waveform
+            - generic [ref=e551]:
+              - generic [ref=e552]: "LOCAL SCHEMA: APPLIED"
+              - generic [ref=e553]: "SESSION INFLOW: 24/7"
+          - generic [ref=e554]:
+            - generic [ref=e555]:
+              - text: 100%
+              - generic [ref=e556]: Digital Brand Elevation
+            - generic [ref=e557]:
+              - text: 24/7
+              - generic [ref=e558]: Inbound Session Lead Engine
+          - link "Request system briefing" [ref=e560] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e566]:
+      - generic [ref=e567]:
+        - generic [ref=e568]: Client Voices
+        - heading "Endorsed by operators who value their time." [level=2] [ref=e569]:
+          - generic [ref=e570]:
+            - generic [ref=e571]: Endorsed
+            - generic [ref=e572]: by
+            - generic [ref=e573]: operators
+            - generic [ref=e574]: who
+            - generic [ref=e575]: value
+            - generic [ref=e576]: their
+            - generic [ref=e577]: time.
+        - paragraph [ref=e578]: Direct perspectives from business owners after deploying custom ElevateFlow systems.
+      - generic [ref=e579]:
+        - generic [ref=e580]:
+          - generic [ref=e581]:
+            - generic [ref=e582]: 10+ Hours/Wk Saved
+            - blockquote [ref=e583]: “ElevateFlow built a patient portal for my clinic. Now my patients can book appointments online and get automated reminders. My staff saves 10+ hours a week.”
+          - generic [ref=e584]:
+            - generic [ref=e585]: RK
+            - generic [ref=e586]:
+              - heading "Dr. Rajesh Kumar" [level=3] [ref=e587]
+              - paragraph [ref=e588]: Cardiologist & Clinic Director
+        - generic [ref=e589]:
+          - generic [ref=e590]:
+            - generic [ref=e591]: +30% Table Turnover
+            - blockquote [ref=e592]: “The QR code menu and online ordering system increased my table turnover by 30%. I wish I had done this sooner.”
+          - generic [ref=e593]:
+            - generic [ref=e594]: SP
+            - generic [ref=e595]:
+              - heading "Sneha Patel" [level=3] [ref=e596]
+              - paragraph [ref=e597]: Restaurant Owner
+        - generic [ref=e598]:
+          - generic [ref=e599]:
+            - generic [ref=e600]: Seamless Booking Engine
+            - blockquote [ref=e601]: “ElevateFlow completely transformed our digital presence. The new website perfectly captures our premium vibe and the integrated booking has streamlined our sessions.”
+          - generic [ref=e602]:
+            - generic [ref=e603]: RR
+            - generic [ref=e604]:
+              - heading "Rajneesh Rana" [level=3] [ref=e605]
+              - paragraph [ref=e606]: Founder, Studio.wav
+    - generic [ref=e608]:
+      - generic [ref=e609]:
+        - generic [ref=e610]: How We Work
+        - heading "From bottleneck diagnosis to self-driving system." [level=2] [ref=e611]:
+          - generic [ref=e612]:
+            - generic [ref=e613]: From
+            - generic [ref=e614]: bottleneck
+            - generic [ref=e615]: diagnosis
+            - generic [ref=e616]: to
+            - generic [ref=e617]: self-driving
+            - generic [ref=e618]: system.
+        - paragraph [ref=e619]: A structured, three-phase delivery model designed to demand minimal time from leadership while maximizing operational leverage.
+      - generic [ref=e620]:
+        - generic [ref=e621]:
+          - generic [ref=e622]:
+            - generic [ref=e623]:
+              - generic [ref=e624]: PHASE DIAGNOSTIC
+              - generic [ref=e625]: "01"
+            - heading "We map your daily bottlenecks, manual leaks, and lost inquiry points." [level=3] [ref=e626]
+            - paragraph [ref=e627]: A candid 15-minute diagnostic call. No confusing tech jargon. We examine where your team is losing hours to repetitive tasks, where prospective clients are falling through cracks, and what software is currently failing you.
+          - generic [ref=e628]:
+            - generic [ref=e629]: PRIMARY MILESTONE
+            - generic [ref=e630]: Custom Systems Blueprint & Scope
+        - generic [ref=e631]:
+          - generic [ref=e632]:
+            - generic [ref=e633]:
+              - generic [ref=e634]: PHASE ARCHITECTURE
+              - generic [ref=e635]: "02"
+            - heading "We engineer bespoke web interfaces and connect automated WhatsApp and CRM flows." [level=3] [ref=e636]
+            - paragraph [ref=e637]: While you remain focused on operating your business, our engineering studio develops your high-speed front door, programs two-way conversational pipelines, and sets up webhook triggers across your backend stack.
+          - generic [ref=e638]:
+            - generic [ref=e639]: PRIMARY MILESTONE
+            - generic [ref=e640]: Fully Integrated Production Environment
+        - generic [ref=e641]:
+          - generic [ref=e642]:
+            - generic [ref=e643]:
+              - generic [ref=e644]: PHASE DEPLOYMENT
+              - generic [ref=e645]: "03"
+            - heading "Frictionless launch, comprehensive team onboarding, and immediate operational leverage." [level=3] [ref=e646]
+            - paragraph [ref=e647]: We walk you and your staff through the interface in plain English. The moment the switch is flipped, inquiries begin routing automatically, reminders dispatch on schedule, and manual workload drops immediately.
+          - generic [ref=e648]:
+            - generic [ref=e649]: PRIMARY MILESTONE
+            - generic [ref=e650]: Live Self-Driving Operations & Handover
+    - generic [ref=e652]:
+      - generic [ref=e653]:
+        - generic [ref=e654]: The Commitment
+        - heading "Technology should prove its value first." [level=2] [ref=e655]:
+          - generic [ref=e656]:
+            - generic [ref=e657]: Technology
+            - generic [ref=e658]: should
+            - generic [ref=e659]: prove
+            - generic [ref=e660]: its
+            - generic [ref=e661]: value
+            - generic [ref=e662]: first.
+        - paragraph [ref=e663]: Too many business owners have been burned by generic software and broken promises. We stand behind our engineering with a straightforward, risk-free guarantee.
+      - generic [ref=e664]:
+        - generic [ref=e665]:
+          - heading "Zero Upfront Commitment" [level=3] [ref=e670]
+          - paragraph [ref=e671]: No credit card required to begin your diagnostic and solution architecture.
+        - generic [ref=e672]:
+          - heading "Pay Only If You Love It" [level=3] [ref=e677]
+          - paragraph [ref=e678]: We deploy the tool to solve your exact problems. You pay only after seeing it work.
+        - generic [ref=e679]:
+          - heading "Plain English Handover" [level=3] [ref=e684]
+          - paragraph [ref=e685]: We show you and your staff exactly how to use your system with zero confusing tech jargon.
+    - generic [ref=e689]:
+      - generic [ref=e690]:
+        - generic [ref=e691]:
+          - generic [ref=e692]: Start A Project
+          - heading "Let us put your business on autopilot." [level=2] [ref=e693]:
+            - generic [ref=e694]:
+              - generic [ref=e695]: Let
+              - generic [ref=e696]: us
+              - generic [ref=e697]: put
+              - generic [ref=e698]: your
+              - generic [ref=e699]: business
+              - generic [ref=e700]: "on"
+              - generic [ref=e701]: autopilot.
+          - paragraph [ref=e702]: Schedule a 15-minute diagnostic conversation. Tell us what is wasting your staff's time, and we will outline whether a custom system can automate it.
+        - generic [ref=e703]:
+          - generic [ref=e704]:
+            - text: DIRECT EMAIL
+            - link "hello@elevateflow.in" [ref=e705] [cursor=pointer]:
+              - /url: mailto:hello@elevateflow.in
+          - generic [ref=e706]:
+            - text: WHATSAPP CONCIERGE HOTLINE
+            - link "Chat on WhatsApp (+91 85277 38145)" [ref=e708] [cursor=pointer]:
+              - /url: https://wa.me/918527738145
+          - generic [ref=e715]:
+            - generic [ref=e716]: Zero Risk Guarantee
+            - text: No credit card required. Pay only if you love the deployed system.
+      - generic [ref=e719]:
+        - generic [ref=e720]:
+          - generic [ref=e721]: Full Name *
+          - textbox "Full Name *" [ref=e722]:
+            - /placeholder: e.g. Dr. Rajesh Kumar
+        - generic [ref=e723]:
+          - generic [ref=e724]: Work Email *
+          - textbox "Work Email *" [ref=e725]:
+            - /placeholder: rajesh@clinic.com
+        - generic [ref=e726]:
+          - generic [ref=e727]: Business Type / Industry *
+          - textbox "Business Type / Industry *" [ref=e728]:
+            - /placeholder: e.g. Healthcare, Hospitality, B2B Distribution
+        - generic [ref=e729]:
+          - generic [ref=e730]: What is your biggest operational bottleneck right now?
+          - textbox "What is your biggest operational bottleneck right now?" [ref=e731]:
+            - /placeholder: e.g. Too many patient no-shows, manual spreadsheet invoicing, or missed after-hours leads...
+        - button "Request Diagnostic Call" [ref=e733]
+        - paragraph [ref=e738]: We respect your privacy. No spam, ever.
+    - contentinfo [ref=e739]:
+      - generic [ref=e740]:
+        - generic [ref=e741]:
+          - generic [ref=e742]:
+            - generic [ref=e743]: Boutique Digital Systems Studio
+            - heading "Let us architect something exceptional." [level=2] [ref=e744]:
+              - generic [ref=e745]:
+                - generic [ref=e746]: Let
+                - generic [ref=e747]: us
+                - generic [ref=e748]: architect
+                - generic [ref=e749]: something
+                - generic [ref=e750]: exceptional.
+          - link [ref=e751] [cursor=pointer]:
+            - /url: "#contact"
+        - navigation "Footer Navigation" [ref=e756]:
+          - generic [ref=e757]:
+            - heading "Solutions" [level=3] [ref=e758]
+            - list [ref=e759]:
+              - listitem [ref=e760]:
+                - link "Digital Front Doors" [ref=e761] [cursor=pointer]:
+                  - /url: "#solutions"
+              - listitem [ref=e762]:
+                - link "WhatsApp Automations" [ref=e763] [cursor=pointer]:
+                  - /url: "#solutions"
+              - listitem [ref=e764]:
+                - link "Smart Booking Engines" [ref=e765] [cursor=pointer]:
+                  - /url: "#solutions"
+              - listitem [ref=e766]:
+                - link "Back-Office Sync" [ref=e767] [cursor=pointer]:
+                  - /url: "#solutions"
+          - generic [ref=e768]:
+            - heading "Studio" [level=3] [ref=e769]
+            - list [ref=e770]:
+              - listitem [ref=e771]:
+                - link "About Thesis" [ref=e772] [cursor=pointer]:
+                  - /url: "#about"
+              - listitem [ref=e773]:
+                - link "Selected Work" [ref=e774] [cursor=pointer]:
+                  - /url: "#systems"
+              - listitem [ref=e775]:
+                - link "Client Results" [ref=e776] [cursor=pointer]:
+                  - /url: "#results"
+              - listitem [ref=e777]:
+                - link "How We Work" [ref=e778] [cursor=pointer]:
+                  - /url: "#process"
+          - generic [ref=e779]:
+            - heading "Connect" [level=3] [ref=e780]
+            - list [ref=e781]:
+              - listitem [ref=e782]:
+                - link "WhatsApp Hotline" [ref=e783] [cursor=pointer]:
+                  - /url: https://wa.me/918527738145
+              - listitem [ref=e784]:
+                - link "Diagnostic Inquiries" [ref=e785] [cursor=pointer]:
+                  - /url: "#contact"
+              - listitem [ref=e786]:
+                - link "hello@elevateflow.in" [ref=e787] [cursor=pointer]:
+                  - /url: mailto:hello@elevateflow.in
+          - generic [ref=e788]:
+            - heading "Studio HQ" [level=3] [ref=e789]
+            - paragraph [ref=e790]: New Delhi, India.Deploying systems globally.hello@elevateflow.in
+        - generic [aria-hidden]:
+          - paragraph: ElevateFlow
+        - generic [ref=e791]:
+          - paragraph [ref=e792]: © 2026 ElevateFlow. All rights reserved.
+          - generic [ref=e793]:
+            - link "Privacy Policy" [ref=e794] [cursor=pointer]:
+              - /url: /privacy-policy
+            - link "Terms of Service" [ref=e795] [cursor=pointer]:
+              - /url: /terms-of-service
+  - button "Open Next.js Dev Tools" [ref=e801] [cursor=pointer]
