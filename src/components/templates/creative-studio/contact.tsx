@@ -130,7 +130,7 @@ export function Contact() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-4" name="consultation" data-netlify="true" netlify-honeypot="bot-field">
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-4" name="consultation">
                     <input type="hidden" name="form-name" value="consultation" />
                     <p className="hidden">
                       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
