@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ElevateFlow — Boutique Digital Systems Studio",
+  title: "ElevateFlow — Tailored Digital Systems Firm",
   description:
     "We architect high-performance digital front doors and self-driving business systems for growing independent companies.",
 };

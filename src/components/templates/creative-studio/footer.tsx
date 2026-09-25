@@ -51,7 +51,7 @@ export function Footer() {
         <div className="flex flex-col gap-8 border-b border-white/10 pb-12 md:flex-row md:items-end md:justify-between">
           <div className="flex flex-col gap-5">
             <span className="text-xs font-mono uppercase tracking-[0.24em] text-(--cs-ink) sm:text-sm">
-              Boutique Digital Systems Studio
+              Tailored Digital Systems Firm
             </span>
             <h2 className="max-w-xl text-3xl leading-[0.95] tracking-[-0.02em] text-(--cs-cream) sm:text-4xl sm:leading-[0.9] md:text-5xl lg:text-6xl">
               <WordsPullUpMultiStyle

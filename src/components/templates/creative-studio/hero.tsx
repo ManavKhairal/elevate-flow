@@ -95,7 +95,7 @@ export function Hero({
           </div>
 
           <div className="hidden items-center gap-6 lg:flex">
-            <span>BOUTIQUE DIGITAL SYSTEMS STUDIO</span>
+            <span>TAILORED DIGITAL SYSTEMS FIRM</span>
             <span className="text-white/20">/</span>
             <span>NEW DELHI · GLOBAL REACH</span>
           </div>
