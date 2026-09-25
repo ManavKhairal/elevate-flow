@@ -9,6 +9,7 @@ import { WordsPullUp } from "./primitives";
 function ConceptualHealthcare() {
   const [step, setStep] = React.useState(0);
   const reduce = useReducedMotion();
+  const chatBoxRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     let isMounted = true;
@@ -41,15 +42,21 @@ function ConceptualHealthcare() {
     };
   }, []);
 
+  React.useEffect(() => {
+    if (chatBoxRef.current) {
+      chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
+    }
+  }, [step]);
+
   // Framer Motion variants
   const popIn = {
-    hidden: { opacity: 0, y: 10, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.3, ease: "easeOut" as const } }
+    hidden: { opacity: 0, y: 8, scale: 0.96 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.25, ease: "easeOut" as const } }
   };
 
   return (
-    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-4 sm:p-5 font-mono text-xs sm:text-sm border border-white/5 overflow-y-auto relative">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-3 gap-2 sm:gap-0 shrink-0">
+    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-3 sm:p-3.5 font-mono text-xs sm:text-sm border border-white/5 relative">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-2 gap-1 sm:gap-0 shrink-0">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
           <span className="text-xs sm:text-sm text-(--cs-ink) truncate">
@@ -59,23 +66,23 @@ function ConceptualHealthcare() {
         <span className="text-[10px] sm:text-xs text-(--cs-muted)">LATENCY: 140ms</span>
       </div>
 
-      <div className="flex flex-col gap-2.5 py-4 overflow-hidden relative grow justify-center">
+      <div ref={chatBoxRef} className="flex flex-col gap-1.5 py-1.5 overflow-y-auto relative grow justify-start scroll-smooth">
         {/* Msg 1: System Reminder */}
         {step >= 1 && (
           <motion.div
             initial={reduce ? { opacity: 0 } : "hidden"}
             animate="visible"
             variants={popIn}
-            className="max-w-[85%] rounded-lg rounded-tl-none bg-[#202c33] p-2.5 text-[#e9edef] shadow-sm relative"
+            className="max-w-[88%] rounded-lg rounded-tl-none bg-[#202c33] p-2 sm:p-2.5 text-[#e9edef] shadow-sm relative"
           >
             <svg viewBox="0 0 8 13" width="8" height="13" className="absolute -left-2 top-0 text-[#202c33] fill-current">
               <path opacity=".55" d="M1.533 3.118L8 12.114V1H2.812C1.042 1 .474 2.156 1.533 3.118z" />
               <path d="M1.533 2.118L8 11.114V0H2.812C1.042 0 .474 1.156 1.533 2.118z" />
             </svg>
-            <p className="font-sans text-[12px] sm:text-[13px] leading-snug">
+            <p className="font-sans text-[11.5px] sm:text-[12.5px] leading-snug">
               Dr. Kumar Clinic: Reminder for checkup tomorrow at 2:00 PM. Reply Y to confirm, N to reschedule.
             </p>
-            <div className="flex justify-end gap-1 mt-1">
+            <div className="flex justify-end gap-1 mt-0.5">
               <span className="text-[9px] text-[#8696a0]">14:00</span>
             </div>
           </motion.div>
@@ -83,7 +90,7 @@ function ConceptualHealthcare() {
 
         {/* User Typing Indicator */}
         {step === 2 && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="self-end flex gap-1 items-center px-3 py-2 bg-[#005c4b] rounded-full rounded-tr-none w-fit shadow-sm relative">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="self-end flex gap-1 items-center px-2.5 py-1.5 bg-[#005c4b] rounded-full rounded-tr-none w-fit shadow-sm relative">
              <svg viewBox="0 0 8 13" width="8" height="13" className="absolute -right-2 top-0 text-[#005c4b] fill-current">
                 <path opacity=".55" d="M5.188 1H0v11.114l6.467-8.996C7.526 2.156 6.958 1 5.188 1z" />
                 <path d="M5.188 0H0v11.114l6.467-8.996C7.526 1.156 6.958 0 5.188 0z" />
@@ -100,16 +107,16 @@ function ConceptualHealthcare() {
             initial={reduce ? { opacity: 0 } : "hidden"}
             animate="visible"
             variants={popIn}
-            className="self-end max-w-[85%] rounded-lg rounded-tr-none bg-[#005c4b] p-2.5 text-[#e9edef] shadow-sm relative"
+            className="self-end max-w-[88%] rounded-lg rounded-tr-none bg-[#005c4b] p-2 sm:p-2.5 text-[#e9edef] shadow-sm relative"
           >
             <svg viewBox="0 0 8 13" width="8" height="13" className="absolute -right-2 top-0 text-[#005c4b] fill-current">
               <path opacity=".55" d="M5.188 1H0v11.114l6.467-8.996C7.526 2.156 6.958 1 5.188 1z" />
               <path d="M5.188 0H0v11.114l6.467-8.996C7.526 1.156 6.958 0 5.188 0z" />
             </svg>
-            <p className="font-sans text-[12px] sm:text-[13px] leading-snug">
+            <p className="font-sans text-[11.5px] sm:text-[12.5px] leading-snug">
               Y — confirmed
             </p>
-            <div className="flex justify-end items-center gap-1 mt-1">
+            <div className="flex justify-end items-center gap-1 mt-0.5">
               <span className="text-[9px] text-[#8696a0]">14:02</span>
               <svg viewBox="0 0 16 11" width="13" height="9" className="text-[#53bdeb] fill-current">
                 <path d="M11.832 0L4.542 7.29l-2.616-2.617L0 6.6l4.542 4.542L13.76 1.926 11.832 0z" />
@@ -121,7 +128,7 @@ function ConceptualHealthcare() {
 
         {/* System Typing Indicator */}
         {step === 4 && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-1 items-center px-3 py-2 bg-[#202c33] rounded-full rounded-tl-none w-fit shadow-sm relative">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-1 items-center px-2.5 py-1.5 bg-[#202c33] rounded-full rounded-tl-none w-fit shadow-sm relative">
              <svg viewBox="0 0 8 13" width="8" height="13" className="absolute -left-2 top-0 text-[#202c33] fill-current">
               <path opacity=".55" d="M1.533 3.118L8 12.114V1H2.812C1.042 1 .474 2.156 1.533 3.118z" />
               <path d="M1.533 2.118L8 11.114V0H2.812C1.042 0 .474 1.156 1.533 2.118z" />
@@ -138,25 +145,25 @@ function ConceptualHealthcare() {
             initial={reduce ? { opacity: 0 } : "hidden"}
             animate="visible"
             variants={popIn}
-            className="max-w-[85%] rounded-lg rounded-tl-none bg-[#202c33] p-2.5 text-[#e9edef] shadow-sm relative"
+            className="max-w-[88%] rounded-lg rounded-tl-none bg-[#202c33] p-2 sm:p-2.5 text-[#e9edef] shadow-sm relative"
           >
             <svg viewBox="0 0 8 13" width="8" height="13" className="absolute -left-2 top-0 text-[#202c33] fill-current">
               <path opacity=".55" d="M1.533 3.118L8 12.114V1H2.812C1.042 1 .474 2.156 1.533 3.118z" />
               <path d="M1.533 2.118L8 11.114V0H2.812C1.042 0 .474 1.156 1.533 2.118z" />
             </svg>
-            <p className="font-sans text-[12px] sm:text-[13px] leading-snug">
+            <p className="font-sans text-[11.5px] sm:text-[12.5px] leading-snug">
               Appointment confirmed for tomorrow at 2:00 PM. See you then! ✅
             </p>
-            <div className="flex justify-end gap-1 mt-1">
+            <div className="flex justify-end gap-1 mt-0.5">
               <span className="text-[9px] text-[#8696a0]">14:02</span>
             </div>
           </motion.div>
         )}
       </div>
 
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between rounded-md bg-white/5 px-3 py-2 text-[10px] sm:text-xs text-(--cs-muted) gap-1 sm:gap-0 shrink-0">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between rounded-md bg-white/5 px-2.5 py-1.5 text-[10px] sm:text-xs text-(--cs-muted) gap-1 sm:gap-0 shrink-0 mt-1">
         <span>CALENDAR: SYNCHRONIZED</span>
-        <span className="text-emerald-400">NO-SHOW RISK: NEUTRALIZED</span>
+        <span className="text-emerald-400 font-semibold">NO-SHOW RISK: NEUTRALIZED</span>
       </div>
     </div>
   );
@@ -378,7 +385,7 @@ export function CaseStudies() {
                 </div>
               </div>
 
-              <div className="h-64 lg:h-72 lg:col-span-6 overflow-hidden rounded-xl">
+              <div className="h-[340px] sm:h-[360px] lg:h-[370px] lg:col-span-6 overflow-hidden rounded-xl">
                 <ConceptualHealthcare />
               </div>
             </div>
