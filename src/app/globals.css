@@ -39,7 +39,6 @@ html,
 body {
   background-color: #000000;
   color: #dedbc8;
-  overscroll-behavior: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
