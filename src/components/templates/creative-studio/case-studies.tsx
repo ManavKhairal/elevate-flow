@@ -8,35 +8,35 @@ import { WordsPullUp } from "./primitives";
 
 function ConceptualHealthcare() {
   return (
-    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-5 font-mono text-sm border border-white/5">
-      <div className="flex items-center justify-between border-b border-white/10 pb-3">
+    <div className="flex h-full w-full flex-col justify-between rounded-xl bg-black/60 p-4 sm:p-5 font-mono text-xs sm:text-sm border border-white/5 overflow-y-auto">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-3 gap-2 sm:gap-0">
         <div className="flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-emerald-500" />
-          <span className="text-sm text-(--cs-ink)">
+          <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
+          <span className="text-xs sm:text-sm text-(--cs-ink) truncate">
             WHATSAPP AUTOMATION PIPELINE
           </span>
         </div>
-        <span className="text-xs text-(--cs-muted)">LATENCY: 140ms</span>
+        <span className="text-[10px] sm:text-xs text-(--cs-muted)">LATENCY: 140ms</span>
       </div>
 
       <div className="flex flex-col gap-3 py-4">
-        <div className="max-w-[85%] rounded-lg bg-white/5 p-3 text-white/80">
+        <div className="max-w-[90%] sm:max-w-[85%] rounded-lg bg-white/5 p-3 text-white/80">
           <p className="text-[9px] uppercase tracking-wider text-(--cs-muted) mb-1">
-            SYSTEM TRIGGER · 24H CONFIRMATION DISPATCH
+            SYSTEM TRIGGER · 24H CONFIRMATION
           </p>
-          <p className="font-sans text-sm text-(--cs-cream)">
+          <p className="font-sans text-xs sm:text-sm text-(--cs-cream) leading-relaxed">
             &quot;Dr. Kumar Clinic: Reminder for checkup tomorrow at 2:00 PM. Reply
             Y to confirm, N to reschedule.&quot;
           </p>
         </div>
-        <div className="self-end max-w-[50%] rounded-lg bg-white/10 p-2.5 text-right">
-          <span className="font-sans text-sm text-(--cs-cream)">
+        <div className="self-end max-w-[70%] sm:max-w-[50%] rounded-lg bg-white/10 p-2.5 text-right">
+          <span className="font-sans text-xs sm:text-sm text-(--cs-cream)">
             &quot;Y — confirmed&quot;
           </span>
         </div>
       </div>
 
-      <div className="flex items-center justify-between rounded-md bg-white/5 px-3 py-2 text-xs text-(--cs-muted)">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between rounded-md bg-white/5 px-3 py-2 text-[10px] sm:text-xs text-(--cs-muted) gap-1 sm:gap-0">
         <span>CALENDAR: SYNCHRONIZED</span>
         <span className="text-emerald-400">NO-SHOW RISK: NEUTRALIZED</span>
       </div>
