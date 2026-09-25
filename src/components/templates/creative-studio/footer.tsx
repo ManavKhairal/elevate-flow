@@ -116,7 +116,7 @@ export function Footer() {
           aria-hidden
           className="pointer-events-none select-none border-t border-white/10 pt-8 overflow-hidden"
         >
-          <p className="text-[18vw] font-medium leading-[0.8] tracking-[-0.07em] text-(--cs-cream)/5">
+          <p className="text-[min(18vw,260px)] font-medium leading-[0.8] tracking-[-0.07em] text-(--cs-cream)/5">
             ElevateFlow
           </p>
         </div>
