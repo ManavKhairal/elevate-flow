@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export const metadata: Metadata = {
   title: "ElevateFlow — Tailored Digital Systems Firm",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark bg-black antialiased" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className="bg-black text-[#dedbc8] min-h-screen" suppressHydrationWarning>{children}</body>
+      <body className="bg-black text-[#dedbc8] min-h-screen" suppressHydrationWarning>
+        {children}
+        <WhatsAppWidget />
+      </body>
     </html>
   );
 }
