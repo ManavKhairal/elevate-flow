@@ -91,7 +91,7 @@ export function Contact() {
                       className="group inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 border border-emerald-500/20 transition-all hover:bg-emerald-500/20"
                     >
                       <MessageSquare className="h-3.5 w-3.5" />
-                      <span>Chat on WhatsApp (+91 85277 38145)</span>
+                      <span>Chat on WhatsApp</span>
                       <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </a>
                   </div>
